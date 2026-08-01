@@ -1,0 +1,1917 @@
+#:kivy 2.1.0
+#:import hex kivy.utils.get_color_from_hex
+#:import dp kivy.metrics.dp
+#:import sp kivy.metrics.sp
+
+# --- COLORS ---
+#:set C_BG_MAIN hex('#0f172a')
+#:set C_BG_CARD hex('#1e293b')
+#:set C_BG_INPUT hex('#334155')
+#:set C_PRIMARY hex('#7c3aed')
+#:set C_SECONDARY hex('#0d9488')
+#:set C_DANGER hex('#e11d48')
+#:set C_SUCCESS hex('#059669')
+#:set C_WHITE hex('#f8fafc')
+#:set C_GRAY hex('#94a3b8')
+
+# --- PRIMITIVES ---
+
+<Label>:
+    font_name: 'Roboto'
+    color: C_WHITE
+    font_size: sp(15)
+
+<TextInput>:
+    background_normal: ''
+    background_active: ''
+    background_color: C_BG_INPUT
+    foreground_color: C_WHITE
+    cursor_color: C_PRIMARY
+    padding: [dp(15), dp(15)]
+    font_size: sp(16)
+    multiline: False
+    write_tab: False
+    canvas.after:
+        Color:
+            rgba: C_GRAY
+        Line:
+            width: dp(1)
+            rounded_rectangle: (self.x, self.y, self.width, self.height, dp(12))
+
+<Button>:
+    background_normal: ''
+    background_down: ''
+    background_color: [0,0,0,0]
+
+<Spinner>:
+    background_normal: ''
+    background_down: ''
+    background_color: C_BG_INPUT
+    color: C_WHITE
+    font_size: sp(16)
+    canvas.after:
+        Color:
+            rgba: C_GRAY
+        Line:
+            width: dp(1)
+            rounded_rectangle: (self.x, self.y, self.width, self.height, dp(12))
+
+<RoundedButton>:
+    canvas.before:
+        Color:
+            rgba: self.bg_color if self.state == 'normal' else [c*0.8 for c in self.bg_color]
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12),]
+
+<IconButton>:
+    canvas.before:
+        Color:
+            rgba: self.shadow_color
+        RoundedRectangle:
+            pos: (self.x + self.shadow_offset[0], self.y - self.shadow_offset[1])
+            size: self.size
+            radius: [dp(10),]
+        Color:
+            rgba: self.bg_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(10),]
+
+<ReportFilterButton>:
+    size_hint: None, None
+    size: dp(90), dp(40)
+    color: C_WHITE if self.selected else C_GRAY
+    bold: self.selected
+    canvas.before:
+        Color:
+            rgba: C_PRIMARY if self.selected else C_BG_INPUT
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(20),]
+
+<CategoryButton>:
+    size_hint: None, None
+    size: dp(110), dp(45)
+    color: self.text_color
+    bold: True
+    font_size: sp(13)
+    canvas.before:
+        Color:
+            rgba: self.bg_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(22.5),]
+        Color:
+            rgba: C_BG_INPUT
+        Line:
+            width: dp(1)
+            rounded_rectangle: (self.x, self.y, self.width, self.height, dp(22.5))
+
+<ProductCard>:
+    orientation: 'vertical'
+    padding: dp(12)
+    spacing: dp(5)
+    canvas.before:
+        Color:
+            rgba: C_BG_CARD if not self.is_out else [0.2, 0.2, 0.2, 0.5]
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12),]
+    Widget:
+        size_hint_y: None
+        height: dp(10)
+        canvas:
+            Color:
+                rgba: C_SUCCESS if int(root.stock) > 10 else C_DANGER
+            Ellipse:
+                pos: self.parent.x + self.parent.width - dp(20), self.parent.y + self.parent.height - dp(20)
+                size: dp(8), dp(8)
+    Label:
+        text: root.name
+        text_size: self.size
+        halign: 'left'
+        valign: 'top'
+        bold: True
+        font_size: sp(15)
+        shorten: True
+        max_lines: 2
+    Label:
+        text: 'Estoque: ' + root.stock
+        color: C_GRAY
+        font_size: sp(12)
+        size_hint_y: None
+        height: dp(15)
+        halign: 'left'
+        text_size: self.size
+    Label:
+        text: 'Kz ' + root.price
+        color: C_PRIMARY
+        bold: True
+        font_size: sp(16)
+        size_hint_y: None
+        height: dp(20)
+        halign: 'left'
+        text_size: self.size
+
+<CartItem>:
+    size_hint_y: None
+    height: dp(80)
+    padding: dp(10)
+    canvas.before:
+        Color:
+            rgba: C_BG_CARD
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(10),]
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.6
+        Label:
+            text: root.name
+            bold: True
+            halign: 'left'
+            text_size: self.size
+            shorten: True
+            font_size: sp(14)
+        Label:
+            text: root.details
+            color: C_GRAY
+            font_size: sp(12)
+            halign: 'left'
+            text_size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.3
+        Label:
+            text: 'Kz ' + root.total
+            bold: True
+            halign: 'right'
+            text_size: self.size
+            font_size: sp(14)
+            valign: 'middle'
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: None
+        width: dp(28)
+        Widget:
+        IconButton:
+            size_hint: None, None
+            size: dp(24), dp(24)
+            bg_color: C_DANGER
+            shadow_color: [0, 0, 0, 0.5]
+            shadow_offset: [dp(1), dp(1)]
+            on_release: if root.remove_callback: root.remove_callback(root)
+            Label:
+                text: 'X'
+                color: C_WHITE
+                bold: True
+                font_size: sp(12)
+                center: self.parent.center
+        Widget:
+
+<LicenseScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(30)
+        spacing: dp(20)
+        size_hint: 0.9, None
+        height: self.minimum_height
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        Label:
+            text: 'Ativação'
+            font_size: sp(24)
+            bold: True
+            size_hint_y: None
+            height: dp(40)
+        TextInput:
+            text: root.machine_id
+            readonly: True
+            halign: 'center'
+            background_color: C_BG_MAIN
+            size_hint_y: None
+            height: dp(50)
+        TextInput:
+            id: key_input
+            hint_text: 'Chave de Licença'
+            halign: 'center'
+            size_hint_y: None
+            height: dp(50)
+        Label:
+            id: error_label
+            text: ''
+            color: C_DANGER
+            size_hint_y: None
+            height: dp(30)
+        RoundedButton:
+            text: 'ATIVAR'
+            bg_color: C_SUCCESS
+            size_hint_y: None
+            height: dp(55)
+            font_size: sp(16)
+            bold: True
+            on_release: root.activate(key_input.text)
+
+<LoginScreen>:
+    canvas.before:
+        Color:
+            rgba: C_BG_MAIN
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(30)
+        spacing: dp(20)
+        size_hint: 0.85, None
+        height: self.minimum_height
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        canvas.before:
+            Color:
+                rgba: C_BG_CARD
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(20),]
+        Label:
+            text: 'Bem-vindo'
+            font_size: sp(26)
+            bold: True
+            size_hint_y: None
+            height: dp(40)
+        Label:
+            text: 'Faça login para acessar o PDV'
+            color: C_GRAY
+            font_size: sp(14)
+            size_hint_y: None
+            height: dp(20)
+        TextInput:
+            id: user_input
+            hint_text: 'Usuário'
+            size_hint_y: None
+            height: dp(55)
+        TextInput:
+            id: pass_input
+            hint_text: 'Senha'
+            password: True
+            size_hint_y: None
+            height: dp(55)
+        Label:
+            id: error_label
+            text: ''
+            color: C_DANGER
+            size_hint_y: None
+            height: dp(20)
+        RoundedButton:
+            text: 'ENTRAR'
+            bg_color: C_PRIMARY
+            size_hint_y: None
+            height: dp(55)
+            bold: True
+            font_size: sp(16)
+            on_release: root.do_login(user_input.text, pass_input.text)
+
+<POSScreen>:
+    canvas.before:
+        Color:
+            rgba: C_BG_MAIN
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint_y: None
+            height: dp(70)
+            padding: [dp(10), dp(10)]
+            spacing: dp(8)
+            canvas.before:
+                Color:
+                    rgba: C_BG_MAIN
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            BoxLayout:
+                size_hint_x: 0.6
+                padding: [dp(5), dp(5)]
+                spacing: dp(5)
+                canvas.before:
+                    Color:
+                        rgba: C_BG_CARD
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [dp(8),]
+                Label:
+                    text: 'MESA:'
+                    color: C_GRAY
+                    font_size: sp(12)
+                    size_hint_x: None
+                    width: dp(40)
+                TextInput:
+                    id: table_input
+                    text: root.current_table
+                    hint_text: 'Digite...'
+                    background_color: [0,0,0,0]
+                    padding: [0, dp(10)]
+                    halign: 'left'
+                    font_size: sp(18)
+                    bold: True
+                    canvas.after:
+                        Color:
+                            rgba: [0,0,0,0]
+                    on_text: root.set_table(self.text)
+            Button:
+                text: 'ADM'
+                size_hint_x: None
+                width: dp(40)
+                color: C_GRAY
+                opacity: 1 if root.is_admin else 0
+                disabled: not root.is_admin
+                on_release: root.go_admin()
+            RoundedButton:
+                text: 'SAIR'
+                size_hint_x: None
+                width: dp(50)
+                bg_color: C_DANGER
+                font_size: sp(12)
+                on_release: root.logout()
+        ScrollView:
+            size_hint_y: None
+            height: dp(60)
+            bar_width: 0
+            BoxLayout:
+                id: category_box
+                orientation: 'horizontal'
+                size_hint_x: None
+                width: self.minimum_width
+                padding: [dp(10), dp(5)]
+                spacing: dp(10)
+        RecycleView:
+            id: rv_products
+            viewclass: 'ProductCard'
+            bar_width: dp(4)
+            RecycleGridLayout:
+                default_size: None, dp(160)
+                default_size_hint: 1, None
+                size_hint_y: None
+                height: self.minimum_height
+                cols: 2
+                spacing: dp(10)
+                padding: dp(10)
+
+        # --- BOTTOM BAR ---
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(135)
+            canvas.before:
+                Color:
+                    rgba: C_BG_CARD
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            BoxLayout:
+                size_hint_y: None
+                height: dp(85)
+                padding: [dp(15), dp(10)]
+                spacing: dp(20)
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_x: 0.5
+                    Label:
+                        text: 'Total'
+                        color: C_GRAY
+                        font_size: sp(12)
+                        halign: 'left'
+                        text_size: self.size
+                    Label:
+                        text: 'Kz ' + "{:.2f}".format(root.cart_total)
+                        color: C_WHITE
+                        bold: True
+                        font_size: sp(22)
+                        halign: 'left'
+                        text_size: self.size
+                    Label:
+                        text: 'Saldo: Kz ' + "{:.2f}".format(root.table_credit - root.cart_total) if root.table_credit > 0 else ''
+                        color: C_SUCCESS if (root.table_credit - root.cart_total) >= 0 else C_DANGER
+                        font_size: sp(12)
+                        halign: 'left'
+                        text_size: self.size
+                RoundedButton:
+                    text: 'CARRINHO'
+                    bg_color: C_SUCCESS if root.has_pending else C_PRIMARY
+                    size_hint_x: 0.5
+                    bold: True
+                    on_release: root.open_cart()
+            BoxLayout:
+                size_hint_y: None
+                height: dp(50)
+                padding: [dp(15), dp(5)]
+                spacing: dp(12)
+                IconButton:
+                    size_hint_x: 0.33
+                    bg_color: C_PRIMARY
+                    shadow_color: [0, 0, 0, 0.8]
+                    shadow_offset: [dp(3), dp(3)]
+                    on_release: root.open_sessions()
+                    Label:
+                        text: 'Mesas'
+                        color: C_WHITE
+                        bold: True
+                        font_size: sp(14)
+                        center: self.parent.center
+                IconButton:
+                    size_hint_x: 0.33
+                    bg_color: C_SECONDARY
+                    shadow_color: [0, 0, 0, 0.8]
+                    shadow_offset: [dp(3), dp(3)]
+                    on_release: root.open_prepaid_popup()
+                    Label:
+                        text: 'Abrir Conta'
+                        color: C_WHITE
+                        bold: True
+                        font_size: sp(12)
+                        center: self.parent.center
+                IconButton:
+                    size_hint_x: 0.34
+                    bg_color: C_DANGER
+                    shadow_color: [0, 0, 0, 0.8]
+                    shadow_offset: [dp(3), dp(3)]
+                    on_release: root.open_debts()
+                    Label:
+                        text: 'Dívidas'
+                        color: C_WHITE
+                        bold: True
+                        font_size: sp(14)
+                        center: self.parent.center
+
+<InfoPopup>:
+    size_hint: 0.8, None
+    height: dp(160)
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(10)
+        canvas.before:
+            Color:
+                rgba: C_BG_CARD
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(40)
+            spacing: dp(10)
+            Label:
+                text: 'Atenção'
+                bold: True
+                font_size: sp(18)
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        Label:
+            text: root.message
+            text_size: self.size
+            halign: 'center'
+            valign: 'middle'
+            color: C_GRAY
+
+<QtyPopup>:
+    size_hint: 0.85, None
+    height: dp(310)
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(10)
+        canvas.before:
+            Color:
+                rgba: C_BG_CARD
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(40)
+            spacing: dp(10)
+            Label:
+                text: 'Quantidade'
+                font_size: sp(18)
+                bold: True
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(60)
+            Label:
+                text: root.product_name
+                font_size: sp(16)
+            Label:
+                text: root.stock_label
+                color: C_GRAY
+                font_size: sp(12)
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(15)
+            size_hint_y: None
+            height: dp(60)
+            RoundedButton:
+                text: '-'
+                bg_color: C_BG_INPUT
+                font_size: sp(24)
+                on_release: root.adjust(-1)
+            Label:
+                text: str(root.qty)
+                font_size: sp(24)
+                bold: True
+                canvas.before:
+                    Color:
+                        rgba: C_BG_INPUT
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [dp(8),]
+            RoundedButton:
+                text: '+'
+                bg_color: C_BG_INPUT
+                font_size: sp(24)
+                on_release: root.adjust(1)
+        BoxLayout:
+            spacing: dp(10)
+            size_hint_y: None
+            height: dp(50)
+            RoundedButton:
+                text: 'Cancelar'
+                bg_color: C_BG_INPUT
+                on_release: root.dismiss()
+            RoundedButton:
+                text: 'Adicionar'
+                bg_color: C_PRIMARY
+                on_release: root.confirm()
+
+<CartModal>:
+    size_hint: 1, 0.95
+    pos_hint: {'bottom': 1}
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: C_BG_MAIN
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(20), dp(20), 0, 0]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(60)
+            padding: dp(20)
+            canvas.before:
+                Color:
+                    rgba: C_BG_CARD
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [dp(20), dp(20), 0, 0]
+            Label:
+                text: 'Pedido Atual'
+                bold: True
+                font_size: sp(18)
+                halign: 'left'
+                text_size: self.size
+            Button:
+                text: 'FECHAR'
+                size_hint_x: None
+                width: dp(80)
+                background_color: [0,0,0,0]
+                on_release: root.dismiss()
+        ScrollView:
+            GridLayout:
+                id: cart_list
+                cols: 1
+                spacing: dp(10)
+                padding: dp(15)
+                size_hint_y: None
+                height: self.minimum_height
+        BoxLayout:
+            size_hint_y: None
+            height: dp(220)
+            orientation: 'vertical'
+            padding: dp(20)
+            spacing: dp(10)
+            canvas.before:
+                Color:
+                    rgba: C_BG_CARD
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            # Credit label
+            Label:
+                text: 'Crédito: Kz {:.2f}'.format(root.table_credit) if root.table_credit > 0 else ''
+                color: C_SUCCESS
+                font_size: sp(14)
+                size_hint_y: None
+                height: dp(20) if root.table_credit > 0 else 0
+                halign: 'right'
+                text_size: self.size
+
+            BoxLayout:
+                Label:
+                    text: 'Total'
+                    color: C_GRAY
+                    halign: 'left'
+                    text_size: self.size
+                Label:
+                    text: 'Kz ' + "{:.2f}".format(root.total)
+                    bold: True
+                    font_size: sp(24)
+                    halign: 'right'
+                    text_size: self.size
+
+            # Payment button
+            RoundedButton:
+                text: root.payment_button_text
+                bg_color: C_PRIMARY
+                size_hint_y: None
+                height: dp(50)
+                bold: True
+                opacity: 0 if root.total == 0 else 1
+                disabled: root.total == 0
+                on_release: root.checkout_callback()
+
+            # Debt button (hidden when credit > 0)
+            RoundedButton:
+                text: 'DEVER'
+                size_hint_y: None
+                height: dp(50)
+                bg_color: C_DANGER
+                bold: True
+                opacity: 0 if (root.total == 0 or root.table_credit > 0) else 1
+                disabled: root.total == 0 or root.table_credit > 0
+                on_release: root.debt_callback()
+
+<CheckoutPopup>:
+    size_hint: 0.9, None
+    height: dp(370)
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(20)
+        canvas.before:
+            Color:
+                rgba: C_BG_CARD
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(40)
+            spacing: dp(10)
+            Label:
+                text: 'Total a Pagar'
+                color: C_GRAY
+                halign: 'left'
+                text_size: self.size
+                font_size: sp(16)
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        Label:
+            text: 'Kz ' + "{:.2f}".format(root.total)
+            font_size: sp(32)
+            bold: True
+            size_hint_y: None
+            height: dp(50)
+        TextInput:
+            id: paid_input
+            hint_text: 'Valor Recebido'
+            multiline: False
+            input_filter: 'float'
+            halign: 'center'
+            font_size: sp(24)
+            size_hint_y: None
+            height: dp(60)
+            on_text: root.calc_change(self.text)
+        Label:
+            id: change_label
+            text: 'Troco: Kz 0.00'
+            color: C_GRAY
+            size_hint_y: None
+            height: dp(30)
+        RoundedButton:
+            text: 'FINALIZAR'
+            bg_color: C_SUCCESS
+            size_hint_y: None
+            height: dp(60)
+            bold: True
+            on_release: root.finalize(paid_input.text)
+
+<ChangeConfirmationPopup>:
+    size_hint: 0.85, None
+    height: dp(280)
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(20)
+        canvas.before:
+            Color:
+                rgba: C_BG_CARD
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(40)
+            spacing: dp(10)
+            Label:
+                text: 'Fechar Conta (Crédito)'
+                bold: True
+                font_size: sp(18)
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        Label:
+            id: change_label
+            text: ''
+            color: C_SUCCESS
+            font_size: sp(24)
+            halign: 'center'
+            size_hint_y: None
+            height: dp(30)
+        TextInput:
+            id: pwd_input
+            hint_text: 'Senha'
+            password: True
+            size_hint_y: None
+            height: dp(50)
+        Label:
+            id: error_label
+            text: ''
+            color: C_DANGER
+            size_hint_y: None
+            height: dp(20)
+        RoundedButton:
+            text: 'Confirmar'
+            bg_color: C_PRIMARY
+            size_hint_y: None
+            height: dp(50)
+            bold: True
+            on_release: root.verify_password(pwd_input.text)
+
+<SessionsPopup>:
+    size_hint: 0.9, 0.7
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        canvas.before:
+            Color:
+                rgba: C_BG_MAIN
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+            padding: [dp(15),0]
+            spacing: dp(10)
+            Label:
+                text: 'Mesas Abertas'
+                bold: True
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        ScrollView:
+            GridLayout:
+                id: sessions_grid
+                cols: 2
+                padding: dp(10)
+                spacing: dp(10)
+                size_hint_y: None
+                height: self.minimum_height
+
+<SessionButton>:
+    orientation: 'horizontal'
+    padding: dp(10)
+    size_hint_y: None
+    height: dp(80)
+    canvas.before:
+        Color:
+            rgba: C_BG_INPUT
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(8),]
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.8
+        Label:
+            text: root.text_label
+            bold: True
+            font_size: sp(16)
+        Label:
+            text: root.total
+            color: C_PRIMARY
+            font_size: sp(12)
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: None
+        width: dp(28)
+        Widget:
+        IconButton:
+            size_hint: None, None
+            size: dp(24), dp(24)
+            bg_color: C_DANGER
+            shadow_color: [0, 0, 0, 0.5]
+            shadow_offset: [dp(1), dp(1)]
+            on_release: if root.delete_callback: root.delete_callback()
+            Label:
+                text: 'X'
+                color: C_WHITE
+                bold: True
+                font_size: sp(12)
+                center: self.parent.center
+        Widget:
+
+<UserManagementModal>:
+    size_hint: 0.9, 0.7
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        canvas.before:
+            Color:
+                rgba: C_BG_MAIN
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(40)
+            Label:
+                text: 'Novo Funcionário'
+                bold: True
+                font_size: sp(18)
+                halign: 'left'
+                text_size: self.size
+            IconButton:
+                size_hint: None, None
+                size: dp(30), dp(30)
+                bg_color: [1, 1, 1, 0.15]
+                on_release: root.dismiss()
+                Label:
+                    text: 'x'
+                    color: C_WHITE
+                    center: self.parent.center
+        BoxLayout:
+            orientation: 'vertical'
+            padding: [0, dp(15)]
+            spacing: dp(15)
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(5)
+                size_hint_y: None
+                height: dp(70)
+                Label:
+                    text: 'Usuário'
+                    color: C_GRAY
+                    font_size: sp(12)
+                    size_hint_y: None
+                    height: dp(15)
+                    halign: 'left'
+                    text_size: self.size
+                TextInput:
+                    id: new_user_name
+                    size_hint_y: None
+                    height: dp(50)
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(5)
+                size_hint_y: None
+                height: dp(70)
+                Label:
+                    text: 'Senha'
+                    color: C_GRAY
+                    font_size: sp(12)
+                    size_hint_y: None
+                    height: dp(15)
+                    halign: 'left'
+                    text_size: self.size
+                TextInput:
+                    id: new_user_pass
+                    password: True
+                    size_hint_y: None
+                    height: dp(50)
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(5)
+                size_hint_y: None
+                height: dp(70)
+                Label:
+                    text: 'Confirmar Senha'
+                    color: C_GRAY
+                    font_size: sp(12)
+                    size_hint_y: None
+                    height: dp(15)
+                    halign: 'left'
+                    text_size: self.size
+                TextInput:
+                    id: new_user_pass_confirm
+                    password: True
+                    size_hint_y: None
+                    height: dp(50)
+            Label:
+                id: error_label
+                text: ''
+                color: C_DANGER
+                size_hint_y: None
+                height: dp(20)
+            RoundedButton:
+                text: 'Criar Conta'
+                bg_color: C_PRIMARY
+                size_hint_y: None
+                height: dp(55)
+                bold: True
+                on_release: root.save(new_user_name.text, new_user_pass.text, new_user_pass_confirm.text)
+
+# --- ADMIN ---
+
+<AdminScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: C_BG_MAIN
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        
+        BoxLayout:
+            pos_hint: {'x':0, 'y':0}
+            size_hint: 1, 1
+            padding: [0, dp(120), 0, 0]
+            orientation: 'vertical'
+            
+            ScrollView:
+                size_hint_y: 1 if root.current_tab == 'reports' else None
+                height: dp(1) if root.current_tab == 'reports' else 0
+                opacity: 1 if root.current_tab == 'reports' else 0
+                disabled: root.current_tab != 'reports'
+                BoxLayout:
+                    orientation: 'vertical'
+                    spacing: dp(15)
+                    size_hint_y: None
+                    height: self.minimum_height
+                    ScrollView:
+                        size_hint_y: None
+                        height: dp(50)
+                        bar_width: 0
+                        BoxLayout:
+                            id: filter_box
+                            orientation: 'horizontal'
+                            size_hint_x: None
+                            width: self.minimum_width
+                            spacing: dp(10)
+                    BoxLayout:
+                        size_hint_y: None
+                        height: dp(60) if root.is_custom_visible else 0
+                        opacity: 1 if root.is_custom_visible else 0
+                        spacing: dp(10)
+                        TextInput:
+                            hint_text: 'Inicio (YYYY-MM-DD)'
+                            text: root.custom_start
+                            on_text: 
+                                root.custom_start = self.text
+                                root.on_custom_date_change()
+                        TextInput:
+                            hint_text: 'Fim (YYYY-MM-DD)'
+                            text: root.custom_end
+                            on_text: 
+                                root.custom_end = self.text
+                                root.on_custom_date_change()
+                    BoxLayout:
+                        orientation: 'vertical'
+                        size_hint_y: None
+                        height: dp(100)
+                        padding: dp(20)
+                        canvas.before:
+                            Color:
+                                rgba: C_PRIMARY
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                                radius: [dp(16),]
+                        Label:
+                            text: 'Receita Total'
+                            font_size: sp(14)
+                            size_hint_y: None
+                            height: dp(20)
+                            halign: 'left'
+                            text_size: self.size
+                            color: [1,1,1,0.8]
+                        Label:
+                            text: root.report_total
+                            font_size: sp(32)
+                            bold: True
+                            halign: 'left'
+                            text_size: self.size
+                    BoxLayout:
+                        orientation: 'vertical'
+                        size_hint_y: None
+                        height: dp(120)
+                        padding: dp(20)
+                        canvas.before:
+                            Color:
+                                rgba: C_BG_CARD
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                                radius: [dp(16),]
+                        Label:
+                            text: 'Total de Transações'
+                            font_size: sp(14)
+                            color: C_GRAY
+                            size_hint_y: None
+                            height: dp(20)
+                            halign: 'left'
+                            text_size: self.size
+                        Label:
+                            text: root.report_count
+                            font_size: sp(28)
+                            bold: True
+                            halign: 'left'
+                            text_size: self.size
+                        RoundedButton:
+                            text: 'Detalhes'
+                            bg_color: C_BG_INPUT
+                            size_hint_y: None
+                            height: dp(30)
+                            on_release: root.show_transactions_details()
+                    BoxLayout:
+                        orientation: 'vertical'
+                        size_hint_y: None
+                        height: dp(90)
+                        padding: dp(20)
+                        canvas.before:
+                            Color:
+                                rgba: C_BG_CARD
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                                radius: [dp(16),]
+                        Label:
+                            text: 'Média por Transação'
+                            font_size: sp(14)
+                            color: C_GRAY
+                            size_hint_y: None
+                            height: dp(20)
+                            halign: 'left'
+                            text_size: self.size
+                        Label:
+                            text: root.report_avg
+                            font_size: sp(28)
+                            bold: True
+                            halign: 'left'
+                            text_size: self.size
+                    # --- TENDENCY CHART ---
+                    BoxLayout:
+                        orientation: 'vertical'
+                        padding: dp(10)
+                        size_hint_y: None
+                        height: dp(200)
+                        canvas.before:
+                            Color:
+                                rgba: C_BG_CARD
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                                radius: [dp(16),]
+                        Label:
+                            text: 'Receita últimos 7 dias'
+                            bold: True
+                            size_hint_y: None
+                            height: dp(20)
+                            font_size: sp(14)
+                            halign: 'left'
+                        Widget:
+                            id: chart_box
+                            size_hint_y: 1
+            
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(15)
+                size_hint_y: 1 if root.current_tab == 'inventory' else None
+                height: dp(1) if root.current_tab == 'inventory' else 0
+                opacity: 1 if root.current_tab == 'inventory' else 0
+                disabled: root.current_tab != 'inventory'
+                TextInput:
+                    hint_text: 'Buscar produtos...'
+                    size_hint_y: None
+                    height: dp(50)
+                    text: root.inv_search
+                    on_text: 
+                        root.inv_search = self.text
+                        root._load_inventory()
+                BoxLayout:
+                    size_hint_y: None
+                    height: dp(45)
+                    spacing: dp(10)
+                    RoundedButton:
+                        text: 'Categorias'
+                        bg_color: C_SECONDARY
+                        on_release: root.open_categories()
+                    RoundedButton:
+                        text: '+ Novo Produto'
+                        bg_color: C_PRIMARY
+                        on_release: root.prompt_add_product()
+                RecycleView:
+                    id: inventory_rv
+                    viewclass: 'AdminProductItem'
+                    bar_width: dp(4)
+                    RecycleBoxLayout:
+                        default_size: None, dp(80)
+                        default_size_hint: 1, None
+                        size_hint_y: None
+                        height: self.minimum_height
+                        orientation: 'vertical'
+                        spacing: dp(10)
+            
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(20)
+                size_hint_y: 1 if root.current_tab == 'users' else None
+                height: dp(1) if root.current_tab == 'users' else 0
+                opacity: 1 if root.current_tab == 'users' else 0
+                disabled: root.current_tab != 'users'
+                BoxLayout:
+                    size_hint_y: None
+                    height: dp(50)
+                    RoundedButton:
+                        text: '+ Novo Funcionário'
+                        bg_color: C_PRIMARY
+                        bold: True
+                        on_release: root.open_user_modal()
+                RecycleView:
+                    id: users_rv
+                    viewclass: 'AdminUserItem'
+                    bar_width: dp(4)
+                    RecycleBoxLayout:
+                        default_size: None, dp(70)
+                        default_size_hint: 1, None
+                        size_hint_y: None
+                        height: self.minimum_height
+                        orientation: 'vertical'
+                        spacing: dp(10)
+        
+        BoxLayout:
+            id: tabs_box
+            pos_hint: {'x':0}
+            size_hint_y: None
+            height: dp(60)
+            padding: [dp(15), dp(5)]
+            spacing: dp(15)
+            ToggleButton:
+                text: 'Relatórios'
+                group: 'admin_tabs'
+                state: 'down'
+                allow_no_selection: False
+                background_color: [0,0,0,0]
+                color: C_PRIMARY if self.state == 'down' else C_GRAY
+                bold: True if self.state == 'down' else False
+                canvas.after:
+                    Color:
+                        rgba: C_PRIMARY if self.state == 'down' else [0,0,0,0]
+                    Line:
+                        points: [self.x, self.y, self.x + self.width, self.y]
+                        width: dp(2)
+                on_release: root.set_tab('reports')
+            ToggleButton:
+                text: 'Estoque'
+                group: 'admin_tabs'
+                allow_no_selection: False
+                background_color: [0,0,0,0]
+                color: C_PRIMARY if self.state == 'down' else C_GRAY
+                bold: True if self.state == 'down' else False
+                canvas.after:
+                    Color:
+                        rgba: C_PRIMARY if self.state == 'down' else [0,0,0,0]
+                    Line:
+                        points: [self.x, self.y, self.x + self.width, self.y]
+                        width: dp(2)
+                on_release: root.set_tab('inventory')
+            ToggleButton:
+                text: 'Usuários'
+                group: 'admin_tabs'
+                allow_no_selection: False
+                background_color: [0,0,0,0]
+                color: C_PRIMARY if self.state == 'down' else C_GRAY
+                bold: True if self.state == 'down' else False
+                canvas.after:
+                    Color:
+                        rgba: C_PRIMARY if self.state == 'down' else [0,0,0,0]
+                    Line:
+                        points: [self.x, self.y, self.x + self.width, self.y]
+                        width: dp(2)
+                on_release: root.set_tab('users')
+        
+        BoxLayout:
+            size_hint_y: None
+            height: dp(60)
+            pos_hint: {'x':0, 'top':1}
+            padding: dp(15)
+            spacing: dp(15)
+            RoundedButton:
+                text: '<'
+                size_hint_x: None
+                width: dp(40)
+                bg_color: C_BG_CARD
+                on_release: root.go_back()
+            Label:
+                text: 'Administração'
+                bold: True
+                font_size: sp(20)
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Sair'
+                size_hint_x: None
+                width: dp(40)
+                bg_color: C_DANGER
+                on_release: app.root.current = 'login'
+
+<AdminProductItem>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: C_BG_CARD
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(12),]
+        BoxLayout:
+            orientation: 'vertical'
+            pos_hint: {'x': 0.02, 'center_y': 0.5}
+            size_hint_x: 0.55
+            Label:
+                text: root.name
+                bold: True
+                font_size: sp(16)
+                halign: 'left'
+                text_size: self.size
+            Label:
+                text: root.cat
+                color: C_GRAY
+                font_size: sp(12)
+                halign: 'left'
+                text_size: self.size
+            Label:
+                text: root.details
+                color: C_SECONDARY
+                font_size: sp(12)
+                halign: 'left'
+                text_size: self.size
+        BoxLayout:
+            orientation: 'horizontal'
+            pos_hint: {'right': 1, 'center_y': 0.5}
+            size_hint: None, None
+            size: dp(160), dp(50)
+            spacing: dp(12)
+            IconButton:
+                size_hint: None, None
+                size: dp(100), dp(44)
+                bg_color: C_BG_INPUT
+                on_release: if root.edit_cb: root.edit_cb()
+                Label:
+                    text: 'Editar'
+                    bold: True
+                    font_size: sp(14)
+                    center: self.parent.center
+            IconButton:
+                size_hint: None, None
+                size: dp(44), dp(44)
+                bg_color: C_DANGER
+                shadow_color: [0, 0, 0, 0.5]
+                shadow_offset: [dp(2), dp(2)]
+                on_release: if root.delete_cb: root.delete_cb()
+                Label:
+                    text: 'X'
+                    color: C_WHITE
+                    bold: True
+                    font_size: sp(15)
+                    center: self.parent.center
+
+<AdminUserItem>:
+    padding: dp(15)
+    canvas.before:
+        Color:
+            rgba: C_BG_CARD
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12),]
+    BoxLayout:
+        size_hint_x: None
+        width: dp(40)
+        canvas.before:
+            Color:
+                rgba: C_BG_INPUT
+            Ellipse:
+                pos: self.pos
+                size: dp(40), dp(40)
+        Label:
+            text: 'U'
+            bold: True
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [dp(15), 0]
+        Label:
+            text: root.username
+            halign: 'left'
+            text_size: self.size
+            bold: True
+            font_size: sp(16)
+        Label:
+            text: root.role.upper()
+            color: C_GRAY
+            font_size: sp(11)
+            halign: 'left'
+            text_size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: None
+        width: dp(40)
+        Widget:
+        IconButton:
+            size_hint: None, None
+            size: dp(24), dp(24)
+            bg_color: C_DANGER
+            shadow_color: [0, 0, 0, 0.5]
+            shadow_offset: [dp(1), dp(1)]
+            disabled: root.username == 'admin'
+            opacity: 0 if root.username == 'admin' else 1
+            on_release: if root.delete_cb: root.delete_cb()
+            Label:
+                text: 'X'
+                color: C_WHITE
+                bold: True
+                font_size: sp(12)
+                center: self.parent.center
+        Widget:
+
+<CategoryMgmtModal>:
+    size_hint: 0.9, 0.7
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(10)
+        canvas.before:
+            Color:
+                rgba: C_BG_MAIN
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(40)
+            spacing: dp(10)
+            Label:
+                text: 'Gerenciar Categorias'
+                bold: True
+                font_size: sp(18)
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        
+        TextInput:
+            id: new_cat_input
+            hint_text: 'Nome da Nova Categoria'
+            size_hint_y: None
+            height: dp(50)
+            font_size: sp(18)
+            foreground_color: C_WHITE
+        
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+            spacing: dp(10)
+            RoundedButton:
+                id: add_btn
+                text: 'Adicionar'
+                size_hint_x: 1
+                bg_color: C_PRIMARY
+                bold: True
+                on_release: root.add_cat(new_cat_input.text)
+            RoundedButton:
+                text: 'Cancelar'
+                size_hint_x: 1
+                bg_color: C_BG_INPUT
+                bold: True
+                opacity: 1 if root.editing_cat_id else 0
+                disabled: not root.editing_cat_id
+                on_release: root.cancel_edit()
+        
+        ScrollView:
+            GridLayout:
+                id: cat_list
+                cols: 1
+                spacing: dp(10)
+                size_hint_y: None
+                height: self.minimum_height
+                padding: [0, dp(15)]
+
+<CategoryItem>:
+    size_hint_y: None
+    height: dp(50)
+    padding: dp(10)
+    canvas.before:
+        Color:
+            rgba: C_BG_CARD
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(8),]
+    BoxLayout:
+        Label:
+            text: root.name
+            halign: 'left'
+            text_size: self.size
+            size_hint_x: 0.6
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_x: None
+        width: dp(120)
+        spacing: dp(10)
+        Widget:
+        IconButton:
+            size_hint: None, None
+            size: dp(56), dp(36)
+            bg_color: C_BG_INPUT
+            on_release: if root.edit_cb: root.edit_cb(root.cat_id, root.name)
+            Label:
+                text: 'Editar'
+                bold: True
+                font_size: sp(10)
+                center: self.parent.center
+        IconButton:
+            size_hint: None, None
+            size: dp(24), dp(24)
+            bg_color: C_DANGER
+            shadow_color: [0, 0, 0, 0.5]
+            shadow_offset: [dp(1), dp(1)]
+            on_release: if root.delete_cb: root.delete_cb(root.cat_id)
+            Label:
+                text: 'X'
+                color: C_WHITE
+                bold: True
+                font_size: sp(12)
+                center: self.parent.center
+        Widget:
+
+<ProductModal>:
+    size_hint: 0.9, None
+    height: dp(650)
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(10)
+        canvas.before:
+            Color:
+                rgba: C_BG_MAIN
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(30)
+            Label:
+                text: 'Novo Produto' if not root.product_id else 'Editar Produto'
+                bold: True
+                font_size: sp(18)
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(60)
+            spacing: dp(2)
+            Label:
+                text: 'Nome'
+                color: C_GRAY
+                font_size: sp(13)
+                size_hint_y: None
+                height: dp(15)
+                halign: 'left'
+                text_size: self.size
+            TextInput:
+                text: root.name_txt
+                on_text: root.name_txt = self.text
+                size_hint_y: None
+                height: dp(44)
+                font_size: sp(16)
+                padding: [dp(12), dp(10)]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(60)
+            spacing: dp(8)
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(2)
+                Label:
+                    text: 'Preço'
+                    color: C_GRAY
+                    font_size: sp(13)
+                    size_hint_y: None
+                    height: dp(15)
+                    halign: 'left'
+                    text_size: self.size
+                TextInput:
+                    input_filter: 'float'
+                    text: root.price_txt
+                    on_text: root.price_txt = self.text
+                    size_hint_y: None
+                    height: dp(44)
+                    font_size: sp(16)
+                    padding: [dp(12), dp(10)]
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(2)
+                Label:
+                    text: 'Estoque'
+                    color: C_GRAY
+                    font_size: sp(13)
+                    size_hint_y: None
+                    height: dp(15)
+                    halign: 'left'
+                    text_size: self.size
+                TextInput:
+                    input_filter: 'int'
+                    text: root.stock_txt
+                    on_text: root.stock_txt = self.text
+                    size_hint_y: None
+                    height: dp(44)
+                    font_size: sp(16)
+                    padding: [dp(12), dp(10)]
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(60)
+            spacing: dp(2)
+            Label:
+                text: 'Categoria'
+                color: C_GRAY
+                font_size: sp(13)
+                size_hint_y: None
+                height: dp(15)
+                halign: 'left'
+                text_size: self.size
+            ComboSpinner:
+                id: cat_spinner
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(180)
+            spacing: dp(5)
+            
+            Label:
+                text: 'Preços por Quantidade'
+                bold: True
+                font_size: sp(14)
+                color: C_WHITE
+                size_hint_y: None
+                height: dp(20)
+                halign: 'left'
+                text_size: self.size
+            
+            ScrollView:
+                size_hint_y: None
+                height: dp(90)
+                GridLayout:
+                    id: tiers_list
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: dp(3)
+            
+            BoxLayout:
+                size_hint_y: None
+                height: dp(40)
+                spacing: dp(8)
+                TextInput:
+                    hint_text: 'Qtd'
+                    input_filter: 'int'
+                    text: root.new_tier_qty
+                    on_text: root.new_tier_qty = self.text
+                    size_hint_x: 0.3
+                    font_size: sp(13)
+                    padding: [dp(8), dp(8)]
+                TextInput:
+                    hint_text: 'Preço Total (Kz)'
+                    input_filter: 'float'
+                    text: root.new_tier_price
+                    on_text: root.new_tier_price = self.text
+                    size_hint_x: 0.5
+                    font_size: sp(13)
+                    padding: [dp(8), dp(8)]
+                RoundedButton:
+                    text: '+'
+                    size_hint_x: 0.2
+                    bg_color: C_PRIMARY
+                    font_size: sp(18)
+                    on_release: root.add_tier()
+
+        Widget:
+        RoundedButton:
+            text: 'Criar' if not root.product_id else 'Salvar'
+            bg_color: C_PRIMARY
+            size_hint_y: None
+            height: dp(50)
+            bold: True
+            on_release: root.save()
+
+<PrepaidPopup>:
+    size_hint: 0.85, None
+    height: dp(250)
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(15)
+        canvas.before:
+            Color:
+                rgba: C_BG_CARD
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(40)
+            spacing: dp(10)
+            Label:
+                text: 'Abrir Conta'
+                bold: True
+                font_size: sp(18)
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        Label:
+            id: current_credit_label
+            text: ''
+            color: C_GRAY
+            size_hint_y: None
+            height: dp(20)
+        TextInput:
+            id: credit_input
+            hint_text: 'Valor do crédito (Kz)'
+            input_filter: 'float'
+            halign: 'center'
+            font_size: sp(24)
+            size_hint_y: None
+            height: dp(60)
+        RoundedButton:
+            text: 'Confirmar'
+            bg_color: C_PRIMARY
+            size_hint_y: None
+            height: dp(50)
+            bold: True
+            on_release: root.confirm(credit_input.text)
+
+<DebtsPopup>:
+    size_hint: 0.95, 0.9
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(16)
+        spacing: dp(12)
+        canvas.before:
+            Color:
+                rgba: C_BG_MAIN
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+            spacing: dp(15)
+            Label:
+                text: 'Dívidas'
+                bold: True
+                font_size: sp(22)
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(80)
+                bg_color: C_BG_INPUT
+                font_size: sp(14)
+                on_release: root.dismiss()
+        ScrollView:
+            GridLayout:
+                id: debt_list
+                cols: 1
+                spacing: dp(14)
+                padding: dp(4)
+                size_hint_y: None
+                height: self.minimum_height
+
+<AuthPopup>:
+    size_hint: 0.8, None
+    height: dp(250)
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(20)
+        canvas.before:
+            Color:
+                rgba: C_BG_CARD
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(40)
+            spacing: dp(10)
+            Label:
+                text: root.title_txt
+                bold: True
+                font_size: sp(18)
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        TextInput:
+            id: pwd_input
+            hint_text: 'Senha'
+            password: True
+            size_hint_y: None
+            height: dp(50)
+        Label:
+            id: error_lbl
+            text: ''
+            color: C_DANGER
+            size_hint_y: None
+            height: dp(20)
+        RoundedButton:
+            text: 'Confirmar'
+            bg_color: C_PRIMARY
+            size_hint_y: None
+            height: dp(50)
+            on_release: root.check(pwd_input.text)
+
+<TransactionsDetailsModal>:
+    size_hint: 0.9, 0.9
+    background_color: [0,0,0,0.5]
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(10)
+        canvas.before:
+            Color:
+                rgba: C_BG_MAIN
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(16),]
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+            spacing: dp(10)
+            Label:
+                text: 'Detalhes das Transações'
+                bold: True
+                halign: 'left'
+                text_size: self.size
+            RoundedButton:
+                text: 'Fechar'
+                size_hint_x: None
+                width: dp(70)
+                bg_color: C_BG_INPUT
+                font_size: sp(12)
+                on_release: root.dismiss()
+        ScrollView:
+            GridLayout:
+                id: trans_list
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: dp(10)
+                padding: dp(10)

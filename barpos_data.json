@@ -1,0 +1,2375 @@
+{
+    "machine_id": "e24b8a3f-62c7-47",
+    "users": [
+        {
+            "username": "admin",
+            "password": "123",
+            "role": "admin"
+        },
+        {
+            "username": "damaso",
+            "password": "123",
+            "role": "employee"
+        }
+    ],
+    "categories": [
+        {
+            "id": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "name": "Bebida"
+        },
+        {
+            "id": "2cc97d19-0651-4f45-9101-8b0ac304ab7c",
+            "name": "Comidas"
+        },
+        {
+            "id": "8014b43f-1085-452c-9d84-d415f2b8565e",
+            "name": "Petiscos"
+        },
+        {
+            "id": "92979b74-f0b2-47c7-bc74-ad64e426efcb",
+            "name": "Cigarro"
+        },
+        {
+            "id": "36b07c7f-29b1-4070-b062-a76a581ca063",
+            "name": "Vinho"
+        },
+        {
+            "id": "8ea1417c-3381-433a-9a21-5a5872847f9e",
+            "name": "FINO"
+        }
+    ],
+    "products": [
+        {
+            "name": "Booster",
+            "price": 500.0,
+            "stock": 0,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "id": "f16c57e1-ea1a-4961-8687-c600a2073e9b",
+            "priceTiers": []
+        },
+        {
+            "name": "Aspen",
+            "price": 100.0,
+            "stock": 0,
+            "categoryId": "8014b43f-1085-452c-9d84-d415f2b8565e",
+            "id": "d2de9019-6728-4387-b777-5898f7f0fa39",
+            "priceTiers": []
+        },
+        {
+            "name": "LD__",
+            "price": 100.0,
+            "stock": 32,
+            "categoryId": "8014b43f-1085-452c-9d84-d415f2b8565e",
+            "id": "f2e5e4e4-bfef-4e77-b4ca-4ce63c84a5aa",
+            "priceTiers": []
+        },
+        {
+            "name": "LD...",
+            "price": 50.0,
+            "stock": 0,
+            "categoryId": "8014b43f-1085-452c-9d84-d415f2b8565e",
+            "id": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+            "priceTiers": []
+        },
+        {
+            "name": "vinho PACO",
+            "price": 2500.0,
+            "stock": 31,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "id": "0e7217ad-8071-4fae-ab32-8e89e1cf8acd",
+            "priceTiers": []
+        },
+        {
+            "name": "AguaBelaGrande",
+            "price": 300.0,
+            "stock": 15,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "id": "312e5b8d-54ed-4775-8913-0ff9ecef2b80",
+            "priceTiers": []
+        },
+        {
+            "name": "CAF\u00c9",
+            "price": 800.0,
+            "stock": 37,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "id": "c28597fa-e2ef-4272-96e8-680badf3f04f",
+            "priceTiers": []
+        },
+        {
+            "name": "AGUA PURA",
+            "price": 500.0,
+            "stock": 22,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "id": "93b51b58-cf9a-4b1b-939e-27f5d7b05178",
+            "priceTiers": []
+        },
+        {
+            "name": "Gasosa",
+            "price": 200.0,
+            "stock": 21,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "id": "d91bf84e-a5dc-48a3-b7d0-98b8792b5c41",
+            "priceTiers": []
+        },
+        {
+            "name": "AguaBela",
+            "price": 100.0,
+            "stock": 9,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "id": "ce52eb89-f2c9-4a1a-a5b3-d684e6eaaabc",
+            "priceTiers": []
+        },
+        {
+            "name": "Febras",
+            "price": 400.0,
+            "stock": 24,
+            "categoryId": "2cc97d19-0651-4f45-9101-8b0ac304ab7c",
+            "id": "e89b34e7-f030-43d8-9d30-0a9a5340c42c",
+            "priceTiers": []
+        },
+        {
+            "name": "Re\u00e7ois",
+            "price": 50.0,
+            "stock": 2,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "92f2ca1d-12a6-44e0-95dc-6baefe0fcc21"
+        },
+        {
+            "name": "Oris",
+            "price": 100.0,
+            "stock": 28,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "29ec8499-defa-4967-9398-dcb0172e117a"
+        },
+        {
+            "name": "Booster",
+            "price": 350.0,
+            "stock": 21,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "e726a0f2-9628-4d34-a51e-5e5f7ae244ac"
+        },
+        {
+            "name": "Sangria",
+            "price": 2500.0,
+            "stock": 28,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "17f65779-0165-4b1c-8313-0cc10d020a1b"
+        },
+        {
+            "name": "7Ventos",
+            "price": 2500.0,
+            "stock": 22,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "55d15daf-9966-4571-9bb8-1116eb5a0d3f"
+        },
+        {
+            "name": "Cuca",
+            "price": 350.0,
+            "stock": 39,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [
+                {
+                    "quantity": 3,
+                    "totalPrice": 1000.0
+                }
+            ],
+            "id": "2433474d-d0a1-4a46-aae9-105780eb45fb"
+        },
+        {
+            "name": "Eka",
+            "price": 350.0,
+            "stock": 30,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [
+                {
+                    "quantity": 3,
+                    "totalPrice": 1000.0
+                }
+            ],
+            "id": "a1064e0b-32f9-4457-ae9d-24e21288b135"
+        },
+        {
+            "name": "Tigra",
+            "price": 350.0,
+            "stock": 40,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "89662b9b-5555-45e2-ab7f-4fabfc72ed33"
+        },
+        {
+            "name": "Blue",
+            "price": 300.0,
+            "stock": 28,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "af63b1bb-a304-4e2d-b9c7-37d03c4339ce"
+        },
+        {
+            "name": "Oris",
+            "price": 100.0,
+            "stock": 43,
+            "categoryId": "92979b74-f0b2-47c7-bc74-ad64e426efcb",
+            "priceTiers": [],
+            "id": "88d72f13-8ad9-469f-b047-e69927c7c2f9"
+        },
+        {
+            "name": "Forrum",
+            "price": 100.0,
+            "stock": 43,
+            "categoryId": "92979b74-f0b2-47c7-bc74-ad64e426efcb",
+            "priceTiers": [],
+            "id": "2b56f2af-b727-4069-8f76-41a94b07b790"
+        },
+        {
+            "name": "Valmonte GARRAFA",
+            "price": 700.0,
+            "stock": 34,
+            "categoryId": "36b07c7f-29b1-4070-b062-a76a581ca063",
+            "priceTiers": [],
+            "id": "e593d24a-30f1-496b-b6df-ba66cb3a213c"
+        },
+        {
+            "name": "CUCA",
+            "price": 350.0,
+            "stock": 28,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "bfd0873f-5da2-4cf4-9dee-5bd6b355787e"
+        },
+        {
+            "name": "NOCAL",
+            "price": 350.0,
+            "stock": 40,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "0ddee686-b508-4517-8f90-57348deaf035"
+        },
+        {
+            "name": "Cuca 350",
+            "price": 350.0,
+            "stock": 29,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "68f518dd-d137-499a-9fee-8cbd9b81c9b1"
+        },
+        {
+            "name": "Yes",
+            "price": 50.0,
+            "stock": 45,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "0e290e2d-853b-4346-a4c0-acbac9a59949"
+        },
+        {
+            "name": "FINO",
+            "price": 700.0,
+            "stock": 40,
+            "categoryId": "a0a4665a-4e95-45fa-9e70-a7347b45d0e1",
+            "priceTiers": [],
+            "id": "d51d656d-ae41-4939-851c-8c7eb5557acb"
+        }
+    ],
+    "sessions": [
+        {
+            "tableName": "HC Servico",
+            "orders": [
+                {
+                    "id": "e5013a52-f6be-4423-b98a-7bc1944a21f9",
+                    "productId": "0ddee686-b508-4517-8f90-57348deaf035",
+                    "name": "NOCAL",
+                    "unit_price": 350.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "07/06/2026 19:50",
+                    "total_price": 1050.0
+                }
+            ],
+            "credit": 0,
+            "userId": "admin"
+        },
+        {
+            "tableName": "branca",
+            "orders": [],
+            "credit": 0,
+            "userId": "admin"
+        },
+        {
+            "tableName": "HC",
+            "orders": [
+                {
+                    "id": "2e2a0d37-f508-48a5-84f6-583d4cbb2560",
+                    "productId": "68f518dd-d137-499a-9fee-8cbd9b81c9b1",
+                    "name": "Cuca 350",
+                    "unit_price": 350.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "12/06/2026 21:20",
+                    "total_price": 700.0
+                }
+            ],
+            "credit": 0,
+            "userId": "damaso"
+        },
+        {
+            "tableName": "Torre de Viana",
+            "orders": [
+                {
+                    "id": "6c40865d-ecaa-4315-ac76-f3a0ebce154c",
+                    "productId": "d51d656d-ae41-4939-851c-8c7eb5557acb",
+                    "name": "FINO",
+                    "unit_price": 700.0,
+                    "quantity": 5,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 5,
+                    "timestamp": "09/07/2026 19:35",
+                    "total_price": 3500.0
+                }
+            ],
+            "credit": 0,
+            "userId": "admin"
+        },
+        {
+            "tableName": "Alice",
+            "orders": [
+                {
+                    "id": "c70a819a-2922-42dc-85eb-af82525a35d0",
+                    "productId": "bfd0873f-5da2-4cf4-9dee-5bd6b355787e",
+                    "name": "CUCA",
+                    "unit_price": 350.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "09/07/2026 22:53",
+                    "total_price": 700.0
+                }
+            ],
+            "credit": 0,
+            "userId": "admin"
+        }
+    ],
+    "transactions": [
+        {
+            "id": "2f7f6753-4d01-456e-afcc-4076953e2b3f",
+            "tableName": "Damaso",
+            "totalAmount": 4000,
+            "timestamp": "2026-02-20T13:11:26.722658",
+            "items": [
+                {
+                    "id": "d93a6cda-3e8d-4765-9faf-e8c82937727a",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 400,
+                    "quantity": 10,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "35514d82-d62e-48d6-8eb3-f0d58fd86448",
+            "tableName": "Ana",
+            "totalAmount": 500,
+            "timestamp": "2026-02-20T13:14:57.493329",
+            "items": [
+                {
+                    "id": "2c9dc79f-db64-42d5-897e-60b4187aff17",
+                    "productId": "8356734a-07a6-44ce-959a-d699f5e5bc54",
+                    "name": "Coca Cola",
+                    "price": 500,
+                    "quantity": 1,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "997cfac1-c7bc-41af-a91e-b097704e8366",
+            "tableName": "Ana",
+            "totalAmount": 1400,
+            "timestamp": "2026-02-25T18:50:15.898651",
+            "items": [
+                {
+                    "id": "1dcdcbee-9e28-42ab-96c8-550bbbf043d6",
+                    "productId": "8356734a-07a6-44ce-959a-d699f5e5bc54",
+                    "name": "Coca Cola",
+                    "price": 500,
+                    "quantity": 2,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "e361c60d-efdb-4c06-952f-2795863ef581",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 400,
+                    "quantity": 1,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "71c85327-61a7-4f34-a503-59accce2cb4f",
+            "tableName": "Elisa",
+            "totalAmount": 10650.0,
+            "timestamp": "2026-03-06T16:22:07.718357",
+            "items": [
+                {
+                    "id": "c4ebdddf-1f74-4745-8b15-1314cf5b5b5d",
+                    "productId": "8356734a-07a6-44ce-959a-d699f5e5bc54",
+                    "name": "Coca Cola",
+                    "price": 500,
+                    "quantity": 5,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "1fa6b20e-a823-4508-aa33-de6186495546",
+                    "productId": "c262f321-1f3c-4573-8156-1018f9fa119a",
+                    "name": "Hamb\u00farguer",
+                    "price": 1200,
+                    "quantity": 1,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "10949793-255f-42af-aa27-969451a0f1bf",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 400,
+                    "quantity": 11,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "63a3609b-b9ca-4931-be6f-7cf96487a211",
+                    "productId": "8356734a-07a6-44ce-959a-d699f5e5bc54",
+                    "name": "Coca Cola",
+                    "price": 500,
+                    "quantity": 3,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "6e9f5822-cf68-4716-aaa5-8733d123962c",
+                    "productId": "825ca31d-a819-4299-b3e2-d006090cec5c",
+                    "name": "cuca",
+                    "price": 350.0,
+                    "quantity": 3,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "7083999e-1653-4498-9efd-c41c78779e98",
+            "tableName": "Daniel",
+            "totalAmount": 5200.0,
+            "timestamp": "2026-03-06T16:23:05.723909",
+            "items": [
+                {
+                    "id": "a3a5480d-f2e1-49b0-9f83-bbe439889058",
+                    "productId": "f16c57e1-ea1a-4961-8687-c600a2073e9b",
+                    "name": "Booster",
+                    "price": 500.0,
+                    "quantity": 8,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "1fb7ce67-604e-4f77-9dcb-67ef001d2547",
+                    "productId": "c262f321-1f3c-4573-8156-1018f9fa119a",
+                    "name": "Hamb\u00farguer",
+                    "price": 1200,
+                    "quantity": 1,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "a36fc382-8128-4af1-b5be-3a8b2a22cc24",
+            "tableName": "Mame",
+            "totalAmount": 7000.0,
+            "timestamp": "2026-03-07T23:30:28.350373",
+            "items": [
+                {
+                    "id": "7ceb3fd1-3d71-48e6-87e3-58f17133eb8b",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "56b8d580-3e05-408e-943b-4b91f1c18d55",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 7,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "1294fd37-1e38-4142-9d0c-75578e5f013b",
+                    "productId": "f2e5e4e4-bfef-4e77-b4ca-4ce63c84a5aa",
+                    "name": "LD__",
+                    "price": 100.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "5fac9bea-a77e-43a2-bce4-5f31674b84a7",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 9,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "14d3ca2b-7212-460e-b981-9e11b3c1886f",
+                    "productId": "f2e5e4e4-bfef-4e77-b4ca-4ce63c84a5aa",
+                    "name": "LD__",
+                    "price": 100.0,
+                    "quantity": 8,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "cadd7ff8-37b1-4bf6-a2d2-089831b0e5e4",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "2b4c830c-1358-44d0-80e4-1a6ebff6f299",
+            "tableName": "Espa\u00e7o fama",
+            "totalAmount": 2150.0,
+            "timestamp": "2026-03-17T22:11:13.648522",
+            "items": [
+                {
+                    "id": "0f8481df-883a-4d77-989a-c20e67b49a35",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 3,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "d5d6e548-24a7-4ee8-afcc-6f9dbe6df155",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 5,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "e48cf955-4f85-4240-aa83-9bfc0495bea8",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "440e9224-500d-4f53-82f5-dc529a2f6876",
+            "tableName": "espaco fama",
+            "totalAmount": 2900.0,
+            "timestamp": "2026-03-21T19:47:24.862196",
+            "items": [
+                {
+                    "id": "8e6dfeb5-3ee7-48c5-8645-d198bdaeb07b",
+                    "productId": "0e7217ad-8071-4fae-ab32-8e89e1cf8acd",
+                    "name": "vinho PACO",
+                    "price": 2500.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "3f045c3b-9f13-4e8f-8ba2-04f79543fed9",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 4,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "601b1743-33cb-490e-a775-ce30cc9aa3c1",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "0a632c1e-9b28-4c1c-aadb-2dd8e06f3b8a",
+            "tableName": "Espa\u00e7o fama",
+            "totalAmount": 2450.0,
+            "timestamp": "2026-03-27T23:17:57.199010",
+            "items": [
+                {
+                    "id": "110cefa0-0dfb-4c57-ae44-cbcec135d360",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 5,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "700541e4-d6d6-4d03-8334-42fe6f6a47f8",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 4,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "7b93e677-4f29-4c9d-9f34-b55f7fc7ca7f",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 3,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "84790ae9-cdae-46a6-b69f-f0fcf026c460",
+                    "productId": "d91bf84e-a5dc-48a3-b7d0-98b8792b5c41",
+                    "name": "Gasosa",
+                    "price": 200.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "b3a27bc8-6569-4112-92f4-721a7f93cad3",
+            "tableName": "espaco fama",
+            "totalAmount": 2900.0,
+            "timestamp": "2026-03-29T18:57:34.580956",
+            "items": [
+                {
+                    "id": "c27abed8-1187-4d3e-ac3e-e80539a07eb9",
+                    "productId": "0e7217ad-8071-4fae-ab32-8e89e1cf8acd",
+                    "name": "vinho PACO",
+                    "price": 2500.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "1dd7acd0-f458-4554-bf2c-b7c74c1efa13",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "6eb49da7-1350-4ef5-b0d9-f7f2737384f6",
+                    "productId": "ce52eb89-f2c9-4a1a-a5b3-d684e6eaaabc",
+                    "name": "AguaBela",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "e2bb4f21-a68e-47a4-8e14-1dcdf222cae1",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "7d27d5d6-8b21-44b3-bcc8-6aca8814d432",
+            "tableName": "Carla Bar",
+            "totalAmount": 4200.0,
+            "timestamp": "2026-04-02T18:57:19.548488",
+            "items": [
+                {
+                    "id": "888036de-30d8-4bc5-8ebd-ab25f6ef2fac",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 6,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "6e78a7d4-3ef9-4a71-8e27-bdd6f6fc3fd5",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "e81a6b93-bd26-45e8-873f-a13d0885b3f6",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 3,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "6e32e1a7-3e67-4006-a000-961c54fcf625",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "66b09a85-2665-4612-87b1-34ec9f239cea",
+            "tableName": "espaco fama",
+            "totalAmount": 1250.0,
+            "timestamp": "2026-04-03T18:12:46.026294",
+            "items": [
+                {
+                    "id": "3e195c6e-02ce-40b3-ac9b-5384c151a0ff",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "95642670-0447-4fbe-9230-fc36ba071a94",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "8dffb2d1-64a1-4e28-b131-0228a094130c",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "74c4cdef-4a80-42ee-8552-6641ecab9e01",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "5677befd-5354-4f89-ada9-2b1bcb35b1e5",
+            "tableName": "fama",
+            "totalAmount": 1700.0,
+            "timestamp": "2026-04-03T18:17:46.274662",
+            "items": [
+                {
+                    "id": "94f098f7-5ffd-4c59-b4bd-638110e29af8",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 4,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "0487f2b3-a688-4e5e-8dbb-4a0afd188e57",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 3,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "f96fb460-d71c-45b2-9afb-d6d4291cc10e",
+            "tableName": "fama",
+            "totalAmount": 2850.0,
+            "timestamp": "2026-04-17T19:58:10.296752",
+            "items": [
+                {
+                    "id": "20e87207-e092-499e-a085-3604cad7b5ec",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 5,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "1a6e8ff2-4ce0-4f29-ba17-88279c39bb57",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 3,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "7c2c5942-181a-40ce-99de-ab26c8eaf33f",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "2aebf57c-9705-4b75-a7bd-92dcc18ca26b",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 2,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "7224e3f4-a809-4093-8b99-6fb50a14430a",
+            "tableName": "sky",
+            "totalAmount": 5500.0,
+            "timestamp": "2026-04-25T07:09:35.739602",
+            "items": [
+                {
+                    "id": "8ad8c76e-06de-4740-8f80-44149a66cb86",
+                    "productId": "5fced40e-f323-4f4a-95b6-bc73c6aa9873",
+                    "name": "Cerveja",
+                    "price": 350.0,
+                    "quantity": 15,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "4edc01d9-cace-4d9d-a436-c8636a9e4553",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 4,
+                    "status": "confirmed"
+                },
+                {
+                    "id": "bee9fe3e-79e6-44fc-824d-b923b3225783",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 1,
+                    "status": "confirmed"
+                }
+            ]
+        },
+        {
+            "id": "e4d9e773-69ed-4469-866b-a2715b3d4695",
+            "tableName": "Espa\u00e7o Fuma",
+            "totalAmount": 4100.0,
+            "timestamp": "2026-04-30T23:46:27.838291",
+            "items": [
+                {
+                    "id": "aca67c5a-e3c7-4c1f-8c3d-7f6d65efb30f",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 336.3636363636364,
+                    "quantity": 11,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 11,
+                    "total_price": 3700.0,
+                    "breakdown": "3 packs de 3 + 2 un"
+                },
+                {
+                    "id": "dec42481-299f-4592-a5d6-9607b32b49f5",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "total_price": 300.0,
+                    "breakdown": "3 un"
+                },
+                {
+                    "id": "c3b1cc83-ef01-47e4-8cbb-4bf1d0417db9",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "total_price": 100.0,
+                    "breakdown": "2 un"
+                }
+            ]
+        },
+        {
+            "id": "bcc1bb9f-f579-42b9-84ab-717d1010eb83",
+            "tableName": "Bar dos Torrados",
+            "totalAmount": 2000.0,
+            "timestamp": "2026-05-02T15:49:29.809969",
+            "items": [
+                {
+                    "id": "9af27188-7c12-416e-8c2d-98bf9d339944",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 333.3333333333333,
+                    "quantity": 6,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 6,
+                    "total_price": 2000.0,
+                    "breakdown": "2 packs de 3"
+                }
+            ],
+            "change": 3000.0
+        },
+        {
+            "id": "a4c43448-892e-4434-b92b-6e2c7f96e255",
+            "tableName": "eva2",
+            "totalAmount": 700.0,
+            "timestamp": "2026-05-02T15:52:17.510540",
+            "items": [
+                {
+                    "id": "f5149c48-1124-4864-a76e-ec02751f345d",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 350.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "total_price": 700.0,
+                    "breakdown": "2 un"
+                }
+            ],
+            "change": 2300.0
+        },
+        {
+            "id": "f5d00b44-0c4d-415d-8a94-38c6e64bad32",
+            "tableName": "Lito",
+            "totalAmount": 2000.0,
+            "timestamp": "2026-05-03T08:32:04.497572",
+            "items": [
+                {
+                    "id": "680302bc-cdf8-47d8-9270-1b5993312693",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 333.3333333333333,
+                    "quantity": 6,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 6,
+                    "total_price": 2000.0,
+                    "breakdown": "2 packs de 3"
+                }
+            ],
+            "change": 3000.0
+        },
+        {
+            "id": "8b0790a7-41d1-4460-b458-1e079586ece3",
+            "tableName": "Espaco fama",
+            "totalAmount": 6050.0,
+            "timestamp": "2026-05-05T19:25:25.494569",
+            "items": [
+                {
+                    "id": "bf7fbd16-6256-46ff-888b-450def335e0e",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 335.29411764705884,
+                    "quantity": 17,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 17,
+                    "total_price": 5700.0,
+                    "breakdown": "5 packs de 3 + 2 un"
+                },
+                {
+                    "id": "e52ff745-ee42-4d7b-bdcd-aa2913a46965",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "total_price": 300.0,
+                    "breakdown": "3 un"
+                },
+                {
+                    "id": "197389ef-e0d2-4e2d-b6a9-1fcd1695f6a7",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "total_price": 50.0,
+                    "breakdown": "1 un"
+                }
+            ]
+        },
+        {
+            "id": "640e4f63-90fe-43ed-a0ba-a047dbc1800f",
+            "tableName": "contentor",
+            "totalAmount": 2350.0,
+            "timestamp": "2026-05-08T19:00:08.974161",
+            "items": [
+                {
+                    "id": "7a51c87f-d28f-4e4c-8e51-81701e669057",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 335.7142857142857,
+                    "quantity": 7,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 7,
+                    "total_price": 2350.0,
+                    "breakdown": "2 packs de 3 + 1 un"
+                }
+            ]
+        },
+        {
+            "id": "8b5913a4-4b11-41f7-8ba3-ec68a5178014",
+            "tableName": "Espaco fama",
+            "totalAmount": 850.0,
+            "timestamp": "2026-05-08T19:01:57.985355",
+            "items": [
+                {
+                    "id": "4c5d0601-e117-4f99-855e-276a22f4f009",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "total_price": 50.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "e1e7829b-1a7d-42f1-b20e-b87d7b674b1f",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "total_price": 100.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "d009d18a-6eb9-4d32-ab66-f8d8886ead5c",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 350.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "total_price": 700.0,
+                    "breakdown": "2 un"
+                }
+            ]
+        },
+        {
+            "id": "5a409b93-cb29-46a5-8578-db7c9807d9df",
+            "tableName": "Espaco fama",
+            "totalAmount": 1200.0,
+            "timestamp": "2026-05-09T08:59:27.425526",
+            "items": [
+                {
+                    "id": "668a3f9e-4afd-4dcd-8a31-0b447e065ab8",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "19:14",
+                    "total_price": 100.0,
+                    "breakdown": "2 un"
+                },
+                {
+                    "id": "614b4a1b-c3d0-42d4-9e45-8e5ec9fad615",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "19:14",
+                    "total_price": 100.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "5acbce18-127e-4645-b3f5-13f5fb280015",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 333.3333333333333,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "19:14",
+                    "total_price": 1000.0,
+                    "breakdown": "1 pack de 3"
+                }
+            ]
+        },
+        {
+            "id": "d0fd59a3-86f7-49e9-b4fb-5129a2344351",
+            "tableName": "vanda",
+            "totalAmount": 4150.0,
+            "timestamp": "2026-05-09T10:33:21.177575",
+            "items": [
+                {
+                    "id": "f53730bc-f72b-47b0-94b2-3f73cde7cd89",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "price": 50.0,
+                    "quantity": 4,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 4,
+                    "timestamp": "19:03",
+                    "total_price": 200.0,
+                    "breakdown": "4 un"
+                },
+                {
+                    "id": "5dd77d9c-cd41-4170-a921-790719c18000",
+                    "productId": "f16c57e1-ea1a-4961-8687-c600a2073e9b",
+                    "name": "Booster",
+                    "price": 500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "19:03",
+                    "total_price": 500.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "63c6fea0-8472-4678-8241-0639f235fe85",
+                    "productId": "0e7217ad-8071-4fae-ab32-8e89e1cf8acd",
+                    "name": "vinho PACO",
+                    "price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "19:04",
+                    "total_price": 2500.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "d4b6d966-c74e-4538-9bfc-bdc286f55ea6",
+                    "productId": "d91bf84e-a5dc-48a3-b7d0-98b8792b5c41",
+                    "name": "Gasosa",
+                    "price": 200.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "08/05/2026 19:30",
+                    "total_price": 200.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "f159af4f-bfb1-4ca8-adfe-5a8969b15e33",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 350.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "08/05/2026 19:30",
+                    "total_price": 350.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "bb8d6907-bd88-4e6d-820a-399b1ae3d9ea",
+                    "productId": "e89b34e7-f030-43d8-9d30-0a9a5340c42c",
+                    "name": "Febras",
+                    "price": 400.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "08/05/2026 19:30",
+                    "total_price": 400.0,
+                    "breakdown": "1 un"
+                }
+            ]
+        },
+        {
+            "id": "abe43eb8-ef26-4008-85bc-0ef84152f75e",
+            "tableName": "vena",
+            "totalAmount": 100.0,
+            "timestamp": "2026-05-09T20:10:43.153058",
+            "items": [
+                {
+                    "id": "75c07af7-07ff-404a-975a-a95eb6ac0b57",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "pending",
+                    "confirmed_qty": 0,
+                    "timestamp": "09/05/2026 10:56",
+                    "total_price": 100.0,
+                    "breakdown": "1 un"
+                }
+            ]
+        },
+        {
+            "id": "2e2bdb1c-ea6f-49f3-8a28-a46b4993c02c",
+            "tableName": "ema",
+            "totalAmount": 1200.0,
+            "timestamp": "2026-05-09T20:14:58.123170",
+            "items": [
+                {
+                    "id": "abf92d42-32bf-4b69-83be-b426bccb7910",
+                    "productId": "ce52eb89-f2c9-4a1a-a5b3-d684e6eaaabc",
+                    "name": "AguaBela",
+                    "price": 100.0,
+                    "quantity": 12,
+                    "type": "unit",
+                    "status": "pending",
+                    "confirmed_qty": 0,
+                    "timestamp": "09/05/2026 11:27",
+                    "total_price": 1200.0,
+                    "breakdown": "12 un"
+                }
+            ]
+        },
+        {
+            "id": "1f8e3369-671b-46c9-bff3-458c86efaf0b",
+            "tableName": "cated",
+            "totalAmount": 600.0,
+            "timestamp": "2026-05-12T12:57:03.830710",
+            "items": [
+                {
+                    "id": "2a3d10f3-ad29-4d85-b5d5-5f90656c4a32",
+                    "productId": "f16c57e1-ea1a-4961-8687-c600a2073e9b",
+                    "name": "Booster",
+                    "price": 500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "pending",
+                    "confirmed_qty": 0,
+                    "timestamp": "09/05/2026 19:18",
+                    "total_price": 500.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "4432dc36-2ed2-43bc-8b5a-828e653ea023",
+                    "productId": "f2e5e4e4-bfef-4e77-b4ca-4ce63c84a5aa",
+                    "name": "LD__",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "pending",
+                    "confirmed_qty": 0,
+                    "timestamp": "09/05/2026 19:19",
+                    "total_price": 100.0,
+                    "breakdown": "1 un"
+                }
+            ]
+        },
+        {
+            "id": "e48196ff-65b8-4df6-8623-aa8572ecd744",
+            "tableName": "conta",
+            "totalAmount": 3350.0,
+            "timestamp": "2026-05-12T13:08:59.017337",
+            "items": [
+                {
+                    "id": "ce46ead8-bf2d-4048-be67-44bcbf0f3b4b",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 335.0,
+                    "quantity": 10,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 10,
+                    "timestamp": "10/05/2026 20:26",
+                    "total_price": 3350.0,
+                    "breakdown": "3 packs de 3 + 1 un"
+                }
+            ]
+        },
+        {
+            "id": "edf16ab0-7ee3-4885-bc1c-76cd53b00c09",
+            "tableName": "CoolBar",
+            "totalAmount": 1200.0,
+            "timestamp": "2026-05-13T19:41:00.514322",
+            "items": [
+                {
+                    "id": "4031a160-463f-40c0-a7e7-6b7c32ee8d4a",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 333.3333333333333,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "13/05/2026 18:29",
+                    "total_price": 1000.0,
+                    "breakdown": "1 pack de 3"
+                },
+                {
+                    "id": "27ad83f6-05d1-4222-9ead-ad7abc5382e8",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "13/05/2026 18:30",
+                    "total_price": 200.0,
+                    "breakdown": "2 un"
+                }
+            ]
+        },
+        {
+            "id": "6e3cfed0-861f-420e-909a-60393755b5b9",
+            "tableName": "Fama",
+            "totalAmount": 2300.0,
+            "timestamp": "2026-05-14T21:57:28.794228",
+            "items": [
+                {
+                    "id": "2052cbef-c81c-4f81-be9e-5acfc2610ba9",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA 3/100",
+                    "price": 333.3333333333333,
+                    "quantity": 6,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 6,
+                    "timestamp": "14/05/2026 20:11",
+                    "total_price": 2000.0,
+                    "breakdown": "2 packs de 3"
+                },
+                {
+                    "id": "f7ffd092-bda6-4788-a77e-ce11ed819b82",
+                    "productId": "92f2ca1d-12a6-44e0-95dc-6baefe0fcc21",
+                    "name": "Re\u00e7ois",
+                    "price": 50.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "14/05/2026 20:26",
+                    "total_price": 100.0,
+                    "breakdown": "2 un"
+                },
+                {
+                    "id": "9bc9140a-bcda-45c6-a605-e4bbbc0ba704",
+                    "productId": "29ec8499-defa-4967-9398-dcb0172e117a",
+                    "name": "Oris",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "14/05/2026 20:30",
+                    "total_price": 100.0,
+                    "breakdown": "1 un"
+                },
+                {
+                    "id": "20dc7110-4379-4ba8-89c1-1fdf753d251d",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "14/05/2026 21:43",
+                    "total_price": 100.0,
+                    "breakdown": "1 un"
+                }
+            ]
+        },
+        {
+            "id": "05f70828-350b-457f-acb0-7da0cf9848bd",
+            "tableName": "Vada",
+            "totalAmount": 1100.0,
+            "timestamp": "2026-05-19T10:59:30.434472",
+            "items": [
+                {
+                    "id": "7134def9-5ef9-46f1-a20a-e475943dcd4c",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "unit_price": 100.0,
+                    "quantity": 8,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 8,
+                    "timestamp": "19/05/2026 10:57",
+                    "total_price": 800.0
+                },
+                {
+                    "id": "1480c01b-6769-4f9e-bb9e-99544346faf2",
+                    "productId": "312e5b8d-54ed-4775-8913-0ff9ecef2b80",
+                    "name": "AguaBelaGrande",
+                    "unit_price": 300.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "19/05/2026 10:57",
+                    "total_price": 300.0
+                }
+            ]
+        },
+        {
+            "id": "3cd03ca9-d7a9-421c-aba0-5c360644c0ec",
+            "tableName": "Elsa",
+            "totalAmount": 4050.0,
+            "timestamp": "2026-05-20T08:36:39.546453",
+            "items": [
+                {
+                    "id": "47fe1f82-f1b4-41e9-830b-837c3b9d77fb",
+                    "productId": "29ec8499-defa-4967-9398-dcb0172e117a",
+                    "name": "Oris",
+                    "unit_price": 100.0,
+                    "quantity": 5,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 5,
+                    "timestamp": "20/05/2026 08:35",
+                    "total_price": 500.0
+                },
+                {
+                    "id": "34a44923-d89a-4533-9669-eae93410c664",
+                    "productId": "17f65779-0165-4b1c-8313-0cc10d020a1b",
+                    "name": "Sangria",
+                    "unit_price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 08:35",
+                    "total_price": 2500.0
+                },
+                {
+                    "id": "2a126129-88fb-44a8-8c28-8d83c712b045",
+                    "productId": "e726a0f2-9628-4d34-a51e-5e5f7ae244ac",
+                    "name": "Booster",
+                    "unit_price": 350.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "20/05/2026 08:36",
+                    "total_price": 1050.0
+                }
+            ]
+        },
+        {
+            "id": "2dcda19a-efc4-4a32-9e89-f91a3835b792",
+            "tableName": "eva",
+            "totalAmount": 3600.0,
+            "timestamp": "2026-05-20T09:54:12.128277",
+            "items": [
+                {
+                    "id": "cb382bfa-0bd2-4547-8616-e6e7258fe97f",
+                    "productId": "17f65779-0165-4b1c-8313-0cc10d020a1b",
+                    "name": "Sangria",
+                    "unit_price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 09:53",
+                    "total_price": 2500.0
+                },
+                {
+                    "id": "f25efc1f-3e35-48ba-8fd8-e5848981cfc1",
+                    "productId": "92f2ca1d-12a6-44e0-95dc-6baefe0fcc21",
+                    "name": "Re\u00e7ois",
+                    "unit_price": 50.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 09:53",
+                    "total_price": 50.0
+                },
+                {
+                    "id": "c630be30-830f-4267-8e27-38b6334d6c93",
+                    "productId": "e726a0f2-9628-4d34-a51e-5e5f7ae244ac",
+                    "name": "Booster",
+                    "unit_price": 350.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "20/05/2026 09:53",
+                    "total_price": 1050.0
+                }
+            ],
+            "paid": 5000.0,
+            "change": 1400.0
+        },
+        {
+            "id": "79b2969a-33f1-4048-8afc-47e3f8c04955",
+            "tableName": "edna",
+            "totalAmount": 150.0,
+            "timestamp": "2026-05-20T10:23:52.121852",
+            "items": [
+                {
+                    "id": "d56c4b90-e640-4c22-ada8-31109ff29a16",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "unit_price": 50.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 0,
+                    "timestamp": "19/05/2026 09:15",
+                    "total_price": 150.0
+                }
+            ],
+            "paid": 0,
+            "change": 1850.0
+        },
+        {
+            "id": "97380bf6-13e9-494a-848c-e6dcbf2d8e5e",
+            "tableName": "Elba",
+            "totalAmount": 2500.0,
+            "timestamp": "2026-05-20T11:23:37.728943",
+            "items": [
+                {
+                    "id": "d8a75c6b-d8c6-4ccf-b93e-a93ef53576ec",
+                    "productId": "0e7217ad-8071-4fae-ab32-8e89e1cf8acd",
+                    "name": "vinho PACO",
+                    "unit_price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 11:22",
+                    "total_price": 2500.0
+                }
+            ],
+            "paid": 5000.0,
+            "change": 2500.0
+        },
+        {
+            "id": "9a31f52e-8873-4c07-b082-9f812ead6fb3",
+            "tableName": "Barao",
+            "totalAmount": 1000.0,
+            "timestamp": "2026-05-20T12:07:57.570285",
+            "items": [
+                {
+                    "id": "95a58165-0db6-4996-bc5a-3af928f6289a",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "unit_price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 12:06",
+                    "total_price": 100.0
+                },
+                {
+                    "id": "45fbd0d8-6466-4d67-99a5-b9821b9485f1",
+                    "productId": "93b51b58-cf9a-4b1b-939e-27f5d7b05178",
+                    "name": "AGUA PURA",
+                    "unit_price": 500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 12:06",
+                    "total_price": 500.0
+                },
+                {
+                    "id": "fe26aff1-d97e-4fd0-995d-745dbb19ef13",
+                    "productId": "e89b34e7-f030-43d8-9d30-0a9a5340c42c",
+                    "name": "Febras",
+                    "unit_price": 400.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 12:06",
+                    "total_price": 400.0
+                }
+            ],
+            "paid": 1000.0,
+            "change": 9000.0
+        },
+        {
+            "id": "1fbec3b5-c830-4992-a00c-3cef14281568",
+            "tableName": "Celbra",
+            "totalAmount": 300.0,
+            "timestamp": "2026-05-20T12:13:18.182446",
+            "items": [
+                {
+                    "id": "001a7c6b-ab24-49f3-9a09-4055da6d262b",
+                    "productId": "312e5b8d-54ed-4775-8913-0ff9ecef2b80",
+                    "name": "AguaBelaGrande",
+                    "unit_price": 300.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 12:12",
+                    "total_price": 300.0
+                }
+            ],
+            "paid": 300.0,
+            "change": 700.0
+        },
+        {
+            "id": "659b3cce-b161-4a61-870e-65018812e10a",
+            "tableName": "Adam",
+            "totalAmount": 3150.0,
+            "timestamp": "2026-05-20T12:17:28.209503",
+            "items": [
+                {
+                    "id": "93ceb669-02b7-45cc-9474-df7a8bf9e480",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA",
+                    "unit_price": 350.0,
+                    "quantity": 9,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 9,
+                    "timestamp": "20/05/2026 12:16",
+                    "total_price": 3150.0
+                }
+            ],
+            "paid": 4000.0,
+            "change": 850.0
+        },
+        {
+            "id": "57f786e9-fcc6-4692-b7ff-7ac68c64bb30",
+            "tableName": "Erica",
+            "totalAmount": 3300.0,
+            "timestamp": "2026-05-20T12:42:45.249594",
+            "items": [
+                {
+                    "id": "dd6a0262-baf2-4c7d-ae33-3d0d15dbb9f1",
+                    "productId": "0e7217ad-8071-4fae-ab32-8e89e1cf8acd",
+                    "name": "vinho PACO",
+                    "unit_price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 12:41",
+                    "total_price": 2500.0
+                },
+                {
+                    "id": "c938564a-ef83-40c2-88bc-bda302b9c108",
+                    "productId": "ce52eb89-f2c9-4a1a-a5b3-d684e6eaaabc",
+                    "name": "AguaBela",
+                    "unit_price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 12:42",
+                    "total_price": 100.0
+                },
+                {
+                    "id": "976e4aac-69c1-4824-a524-7325339967e7",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA",
+                    "unit_price": 350.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "20/05/2026 12:42",
+                    "total_price": 700.0
+                }
+            ],
+            "paid": 5000.0,
+            "change": 1700.0
+        },
+        {
+            "id": "019d1997-8bcf-44c9-b8af-b61c65bcd1ba",
+            "tableName": "Debora",
+            "totalAmount": 2500.0,
+            "timestamp": "2026-05-20T12:45:43.366522",
+            "items": [
+                {
+                    "id": "85741a27-f81b-43d8-8b03-133bcd1c7ea2",
+                    "productId": "17f65779-0165-4b1c-8313-0cc10d020a1b",
+                    "name": "Sangria",
+                    "unit_price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 12:44",
+                    "total_price": 2500.0
+                }
+            ],
+            "paid": 2000.0,
+            "change": 0.0
+        },
+        {
+            "id": "ee6026f1-f4f1-47a7-ae4d-c6cd568e1438",
+            "tableName": "Eva",
+            "totalAmount": 900.0,
+            "timestamp": "2026-05-20T12:53:56.398781",
+            "items": [
+                {
+                    "id": "bda4bcef-acfc-4b17-8fdf-5224c8477d37",
+                    "productId": "312e5b8d-54ed-4775-8913-0ff9ecef2b80",
+                    "name": "AguaBelaGrande",
+                    "unit_price": 300.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "20/05/2026 11:42",
+                    "total_price": 300.0
+                },
+                {
+                    "id": "2c8265ef-e7f6-4d30-a20c-a34c1d95cdb1",
+                    "productId": "d91bf84e-a5dc-48a3-b7d0-98b8792b5c41",
+                    "name": "Gasosa",
+                    "unit_price": 200.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "20/05/2026 11:42",
+                    "total_price": 600.0
+                }
+            ],
+            "paid": 2000.0,
+            "change": 1100.0
+        },
+        {
+            "id": "6425f81c-33b6-45b0-a6e6-60b629d89b32",
+            "tableName": "Belga",
+            "totalAmount": 700.0,
+            "timestamp": "2026-05-20T12:58:05.974816",
+            "items": [
+                {
+                    "id": "66a19e71-84a6-4dd5-b532-cc26c6f949dc",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA",
+                    "unit_price": 350.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "20/05/2026 12:55",
+                    "total_price": 700.0
+                }
+            ],
+            "paid": 500.0,
+            "change": 0.0
+        },
+        {
+            "id": "08f82445-0075-46f7-b701-bacad08e61ca",
+            "tableName": "Ira",
+            "totalAmount": 1600.0,
+            "timestamp": "2026-05-20T13:08:41.372815",
+            "items": [
+                {
+                    "id": "1b4b2a93-2e04-47a0-8d18-d4841f5e30fb",
+                    "productId": "c28597fa-e2ef-4272-96e8-680badf3f04f",
+                    "name": "CAF\u00c9",
+                    "unit_price": 800.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "20/05/2026 13:08",
+                    "total_price": 1600.0
+                }
+            ],
+            "paid": 0,
+            "change": 400.0
+        },
+        {
+            "id": "5d6f8b1d-6d21-4bdd-a3fe-ce0961b34894",
+            "tableName": "cera",
+            "totalAmount": 2100.0,
+            "timestamp": "2026-05-20T13:28:11.595833",
+            "items": [
+                {
+                    "id": "732dfa89-f5ea-4cb7-8d64-c545bfeaa644",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA",
+                    "unit_price": 350.0,
+                    "quantity": 6,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 6,
+                    "timestamp": "20/05/2026 13:26",
+                    "total_price": 2100.0
+                }
+            ],
+            "paid": 6000.0,
+            "change": 3900.0
+        },
+        {
+            "id": "412f9025-1a1b-4968-9159-3d13f4d382a0",
+            "tableName": "Eva",
+            "totalAmount": 750.0,
+            "timestamp": "2026-05-21T10:29:52.585014",
+            "items": [
+                {
+                    "id": "12fd3e03-a900-45fb-a822-97673dcf43c5",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "unit_price": 50.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:26",
+                    "total_price": 50.0
+                },
+                {
+                    "id": "5d51b0f4-f157-44dc-a9ef-011d04bc4eee",
+                    "productId": "93b51b58-cf9a-4b1b-939e-27f5d7b05178",
+                    "name": "AGUA PURA",
+                    "unit_price": 500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:26",
+                    "total_price": 500.0
+                },
+                {
+                    "id": "441448c2-4dda-47d2-992c-715a76024a84",
+                    "productId": "d91bf84e-a5dc-48a3-b7d0-98b8792b5c41",
+                    "name": "Gasosa",
+                    "unit_price": 200.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:26",
+                    "total_price": 200.0
+                }
+            ],
+            "paid": 5000.0,
+            "change": 4250.0
+        },
+        {
+            "id": "de809b75-05cc-46fc-a03d-73996e651775",
+            "tableName": "Adao",
+            "totalAmount": 3400.0,
+            "timestamp": "2026-05-21T10:31:01.860271",
+            "items": [
+                {
+                    "id": "59b66ecf-7a59-4919-90ae-d7ae30c72436",
+                    "productId": "c28597fa-e2ef-4272-96e8-680badf3f04f",
+                    "name": "CAF\u00c9",
+                    "unit_price": 800.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:27",
+                    "total_price": 800.0
+                },
+                {
+                    "id": "0dba5d59-d085-438a-b0c1-505620657668",
+                    "productId": "55d15daf-9966-4571-9bb8-1116eb5a0d3f",
+                    "name": "7Ventos",
+                    "unit_price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:28",
+                    "total_price": 2500.0
+                },
+                {
+                    "id": "acbeeb69-35f9-4350-899e-54a1cbceb304",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "unit_price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:30",
+                    "total_price": 100.0
+                }
+            ],
+            "paid": 4000.0,
+            "change": 600.0
+        },
+        {
+            "id": "8a7f3557-f8b2-4509-ad2e-faca08230c1a",
+            "tableName": "Eva",
+            "totalAmount": 800.0,
+            "timestamp": "2026-05-21T10:41:03.669598",
+            "items": [
+                {
+                    "id": "b059ead3-0bf4-4e24-afc7-57f56fc62b11",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "unit_price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:39",
+                    "total_price": 100.0
+                },
+                {
+                    "id": "640f6edb-7299-4be9-8c67-932fdf7a50fd",
+                    "productId": "93b51b58-cf9a-4b1b-939e-27f5d7b05178",
+                    "name": "AGUA PURA",
+                    "unit_price": 500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:39",
+                    "total_price": 500.0
+                },
+                {
+                    "id": "fe5bee4a-237c-47ed-b648-526f6c568909",
+                    "productId": "d91bf84e-a5dc-48a3-b7d0-98b8792b5c41",
+                    "name": "Gasosa",
+                    "unit_price": 200.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:39",
+                    "total_price": 200.0
+                }
+            ],
+            "paid": 5000.0,
+            "change": 4200.0
+        },
+        {
+            "id": "90dc3531-6ea1-47da-bef4-b6d3b717529e",
+            "tableName": "Estevao",
+            "totalAmount": 3250.0,
+            "timestamp": "2026-05-21T10:42:08.993818",
+            "items": [
+                {
+                    "id": "d29cd3c8-b1a6-490a-892b-5a19a7f05f16",
+                    "productId": "0e7217ad-8071-4fae-ab32-8e89e1cf8acd",
+                    "name": "vinho PACO",
+                    "unit_price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:39",
+                    "total_price": 2500.0
+                },
+                {
+                    "id": "20e9d306-41ca-45c2-aae8-78f861131f30",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "unit_price": 50.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:40",
+                    "total_price": 50.0
+                },
+                {
+                    "id": "637bbd41-cf37-45c3-b283-b212afdbcc67",
+                    "productId": "93b51b58-cf9a-4b1b-939e-27f5d7b05178",
+                    "name": "AGUA PURA",
+                    "unit_price": 500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "21/05/2026 10:40",
+                    "total_price": 500.0
+                },
+                {
+                    "id": "8527d2eb-18d5-4594-bc09-71e00abf24fe",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "unit_price": 100.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "21/05/2026 10:41",
+                    "total_price": 200.0
+                }
+            ],
+            "paid": 4000.0,
+            "change": 750.0
+        },
+        {
+            "id": "0f879cd1-c493-45ee-b6c4-35f47a60b9f9",
+            "tableName": "ema",
+            "totalAmount": 2000.0,
+            "timestamp": "2026-06-03T07:21:40.010792",
+            "items": [
+                {
+                    "id": "b901d0ac-d7aa-4d8e-9206-636ea431605f",
+                    "productId": "2433474d-d0a1-4a46-aae9-105780eb45fb",
+                    "name": "Cuca",
+                    "unit_price": 350.0,
+                    "quantity": 6,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 6,
+                    "timestamp": "03/06/2026 06:50",
+                    "total_price": 2000.0,
+                    "tier_quantity": 3,
+                    "pack_count": 2
+                }
+            ],
+            "paid": 2000.0,
+            "change": 0.0
+        },
+        {
+            "id": "c448abfa-5d06-491b-a03e-1596fe640414",
+            "tableName": "HC Servi\u00e7os",
+            "totalAmount": 1400.0,
+            "timestamp": "2026-06-07T19:48:01.837547",
+            "items": [
+                {
+                    "id": "3df4afd3-bf6f-4630-889e-a959d8446a6a",
+                    "productId": "bfd0873f-5da2-4cf4-9dee-5bd6b355787e",
+                    "name": "CUCA",
+                    "unit_price": 350.0,
+                    "quantity": 4,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 4,
+                    "timestamp": "07/06/2026 19:17",
+                    "total_price": 1400.0
+                }
+            ],
+            "paid": 2000.0,
+            "change": 600.0
+        },
+        {
+            "id": "effa35ea-1590-42e2-8167-cc2e7e659550",
+            "tableName": "Vanda",
+            "totalAmount": 1800.0,
+            "timestamp": "2026-06-10T08:17:26.353910",
+            "items": [
+                {
+                    "id": "e7db5540-e5d8-448f-b4dc-bbb3f8e90e8a",
+                    "productId": "d91bf84e-a5dc-48a3-b7d0-98b8792b5c41",
+                    "name": "Gasosa",
+                    "unit_price": 200.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "20/05/2026 13:39",
+                    "total_price": 600.0
+                },
+                {
+                    "id": "a1e02de4-5725-4ae0-9914-e35014e906a5",
+                    "productId": "e89b34e7-f030-43d8-9d30-0a9a5340c42c",
+                    "name": "Febras",
+                    "unit_price": 400.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "20/05/2026 13:39",
+                    "total_price": 1200.0
+                }
+            ],
+            "paid": 2000.0,
+            "change": 200.0
+        },
+        {
+            "id": "b0c6aad3-6d91-46b7-a796-badd265d7a72",
+            "tableName": "Vanda",
+            "totalAmount": 1200.0,
+            "timestamp": "2026-06-10T09:05:14.842147",
+            "items": [
+                {
+                    "id": "c81fd8d4-c336-4b44-9e95-6bfa78e6e9cc",
+                    "productId": "312e5b8d-54ed-4775-8913-0ff9ecef2b80",
+                    "name": "AguaBelaGrande",
+                    "unit_price": 300.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "10/06/2026 09:03",
+                    "total_price": 600.0
+                },
+                {
+                    "id": "163b4396-e854-4373-baaa-1d288cb1b9e4",
+                    "productId": "e89b34e7-f030-43d8-9d30-0a9a5340c42c",
+                    "name": "Febras",
+                    "unit_price": 400.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "10/06/2026 09:03",
+                    "total_price": 400.0
+                },
+                {
+                    "id": "f9ebccdb-40a9-4699-ab37-28919215afa5",
+                    "productId": "d91bf84e-a5dc-48a3-b7d0-98b8792b5c41",
+                    "name": "Gasosa",
+                    "unit_price": 200.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "10/06/2026 09:03",
+                    "total_price": 200.0
+                }
+            ],
+            "paid": 5000.0,
+            "change": 3800.0
+        },
+        {
+            "id": "fe6f724f-adff-412f-b30e-3f62c18cebce",
+            "tableName": "bar",
+            "totalAmount": 1600.0,
+            "timestamp": "2026-06-12T21:08:48.826660",
+            "items": [
+                {
+                    "id": "531f021d-05f8-4b73-9dde-7badfbb53239",
+                    "productId": "68f518dd-d137-499a-9fee-8cbd9b81c9b1",
+                    "name": "Cuca 350",
+                    "unit_price": 350.0,
+                    "quantity": 4,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 4,
+                    "timestamp": "12/06/2026 21:02",
+                    "total_price": 1400.0
+                },
+                {
+                    "id": "4dab05b0-1655-41cc-ac45-84fde883aa6a",
+                    "productId": "f2e5e4e4-bfef-4e77-b4ca-4ce63c84a5aa",
+                    "name": "LD__",
+                    "unit_price": 100.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "12/06/2026 21:04",
+                    "total_price": 200.0
+                }
+            ],
+            "paid": 1600.0,
+            "change": 0.0
+        },
+        {
+            "id": "9867dcb0-4f70-47c8-a21c-4948e7e4d04d",
+            "tableName": "Flavio",
+            "totalAmount": 4150.0,
+            "timestamp": "2026-06-16T18:29:02.046038",
+            "items": [
+                {
+                    "id": "842bb1fb-6904-4830-b9a0-cc2227f6e58f",
+                    "productId": "17f65779-0165-4b1c-8313-0cc10d020a1b",
+                    "name": "Sangria",
+                    "unit_price": 2500.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "16/06/2026 18:26",
+                    "total_price": 2500.0
+                },
+                {
+                    "id": "c458a81e-3fcf-4175-82e4-2b23b2528edc",
+                    "productId": "a1064e0b-32f9-4457-ae9d-24e21288b135",
+                    "name": "Eka",
+                    "unit_price": 350.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "16/06/2026 18:26",
+                    "total_price": 350.0
+                },
+                {
+                    "id": "a2568976-375e-4a97-b89b-0e12257714ee",
+                    "productId": "89662b9b-5555-45e2-ab7f-4fabfc72ed33",
+                    "name": "Tigra",
+                    "unit_price": 350.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "16/06/2026 18:27",
+                    "total_price": 700.0
+                },
+                {
+                    "id": "50a12c49-9035-498b-acc0-13c5d361ecbf",
+                    "productId": "af63b1bb-a304-4e2d-b9c7-37d03c4339ce",
+                    "name": "Blue",
+                    "unit_price": 300.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "16/06/2026 18:27",
+                    "total_price": 600.0
+                }
+            ],
+            "paid": 4200.0,
+            "change": 50.0
+        },
+        {
+            "id": "33d7f15a-3259-402f-8de3-3668e5098b70",
+            "tableName": "Carla",
+            "totalAmount": 2350.0,
+            "timestamp": "2026-06-16T18:38:19.867750",
+            "items": [
+                {
+                    "id": "27cdeac7-ac1c-4b10-9355-94d7c5eaeb47",
+                    "productId": "a1064e0b-32f9-4457-ae9d-24e21288b135",
+                    "name": "Eka",
+                    "unit_price": 350.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "16/06/2026 18:29",
+                    "total_price": 1000.0,
+                    "tier_quantity": 3,
+                    "pack_count": 1
+                },
+                {
+                    "id": "57d4d28e-bc56-4da0-978d-fdc0b0f4ee19",
+                    "productId": "2433474d-d0a1-4a46-aae9-105780eb45fb",
+                    "name": "Cuca",
+                    "unit_price": 350.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "16/06/2026 18:30",
+                    "total_price": 1000.0,
+                    "tier_quantity": 3,
+                    "pack_count": 1
+                },
+                {
+                    "id": "75b01d05-a967-44d9-991e-21a197fa060b",
+                    "productId": "89662b9b-5555-45e2-ab7f-4fabfc72ed33",
+                    "name": "Tigra",
+                    "unit_price": 350.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "16/06/2026 18:30",
+                    "total_price": 350.0
+                }
+            ],
+            "paid": 4000.0,
+            "change": 1650.0
+        }
+    ],
+    "license_key": "eyJtaWQiOiJlMjRiOGEzZi02MmM3LTQ3IiwiZXhwIjoiMjAyNi0wMi0yMCAxMzoyMjo1MiJ9fGE4ZmU3MjYzNmE3ZmY4OWJiN2Q4YmY2MDk0ZDZhYmJkNmFjYmM1ZmM1MDg3ZWVkMzVhMjI4ODMxMGI3MjkyMDU=",
+    "debts": [
+        {
+            "tableName": "Tio Frasico",
+            "totalAmount": 3300.0,
+            "items": [
+                {
+                    "id": "58a2dcc7-bdc1-4a9a-b8e1-4fca18e5596a",
+                    "productId": "92f2ca1d-12a6-44e0-95dc-6baefe0fcc21",
+                    "name": "Re\u00e7ois",
+                    "unit_price": 50.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "20/05/2026 13:37",
+                    "total_price": 150.0
+                },
+                {
+                    "id": "933c2dc8-3be9-4385-9853-783358c693f1",
+                    "productId": "65c71b86-7bc6-41f3-81db-c6e61b991ad7",
+                    "name": "CUCA",
+                    "unit_price": 350.0,
+                    "quantity": 9,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 9,
+                    "timestamp": "20/05/2026 13:37",
+                    "total_price": 3150.0
+                }
+            ],
+            "userId": "admin",
+            "id": "f923739b-cad9-4841-83ca-ffd3d271eb8f",
+            "timestamp": "2026-05-20T13:37:56.188997"
+        },
+        {
+            "tableName": "vemba",
+            "totalAmount": 350.0,
+            "items": [
+                {
+                    "id": "243d1f4d-f0ae-4c9e-8fa1-e1558bc0a596",
+                    "productId": "d2de9019-6728-4387-b777-5898f7f0fa39",
+                    "name": "Aspen",
+                    "unit_price": 100.0,
+                    "quantity": 1,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 1,
+                    "timestamp": "10/06/2026 08:13",
+                    "total_price": 100.0
+                },
+                {
+                    "id": "30dd9ef6-d158-48b8-9995-28c47942eac1",
+                    "productId": "d4302bdc-24b1-44f3-baa7-442fcc8586ed",
+                    "name": "LD...",
+                    "unit_price": 50.0,
+                    "quantity": 3,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 3,
+                    "timestamp": "10/06/2026 08:13",
+                    "total_price": 150.0
+                },
+                {
+                    "id": "a8624112-7687-4490-b315-b0eec169445b",
+                    "productId": "92f2ca1d-12a6-44e0-95dc-6baefe0fcc21",
+                    "name": "Re\u00e7ois",
+                    "unit_price": 50.0,
+                    "quantity": 2,
+                    "type": "unit",
+                    "status": "confirmed",
+                    "confirmed_qty": 2,
+                    "timestamp": "10/06/2026 08:13",
+                    "total_price": 100.0
+                }
+            ],
+            "userId": "admin",
+            "id": "9a18b5a1-ea43-41be-8c62-e4b5d00a6d49",
+            "timestamp": "2026-06-10T08:16:28.892384"
+        }
+    ]
+}
