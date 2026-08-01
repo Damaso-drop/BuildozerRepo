@@ -11,10 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python 3.10
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.10'
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -28,8 +28,10 @@ jobs:
           sudo apt install -y git zip unzip autoconf libtool pkg-config \
             zlib1g-dev libncurses5-dev cmake libffi-dev libssl-dev
 
-      - name: Install buildozer
-        run: pip install --upgrade buildozer cython
+      - name: Install buildozer (pinned working versions)
+        run: |
+          pip install --upgrade pip
+          pip install buildozer==1.5.0 cython==0.29.36 python-for-android==2024.1.21
 
       - name: Cache buildozer global directory
         uses: actions/cache@v4
@@ -48,7 +50,7 @@ jobs:
           sdkmanager "platform-tools" "platforms;android-33" "build-tools;33.0.2"
           echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
           echo "ANDROIDSDK=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
-          echo "PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/33.0.2" >> $GITHUB_ENV
+          echo "PATH=$(python3 -c 'import sys; print(sys.exec_prefix)')/bin:$PATH:$ANDROID_SDK_ROOT/build-tools/33.0.2" >> $GITHUB_ENV
 
       - name: Build APK
         run: buildozer -v android debug
