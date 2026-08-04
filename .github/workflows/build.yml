@@ -16,11 +16,6 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Force system python3 to use 3.10
-        run: |
-          sudo ln -sf $(which python3) /usr/bin/python3
-          python3 --version
-
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
@@ -32,6 +27,11 @@ jobs:
           sudo apt update
           sudo apt install -y git zip unzip autoconf libtool pkg-config \
             zlib1g-dev libncurses5-dev cmake libffi-dev libssl-dev
+
+      - name: Force system python3 to use 3.10
+        run: |
+          sudo ln -sf $(which python3) /usr/bin/python3
+          python3 --version
 
       - name: Install buildozer (pinned working versions)
         run: |
