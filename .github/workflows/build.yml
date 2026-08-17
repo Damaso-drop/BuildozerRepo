@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+
     steps:
       - uses: actions/checkout@v4
 
@@ -16,7 +17,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Set up Java
+      - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
@@ -26,19 +27,15 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y git zip unzip autoconf libtool pkg-config \
-            zlib1g-dev libncurses5-dev cmake libffi-dev libssl-dev
+            zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 \
+            cmake libffi-dev libssl-dev
 
-      - name: Force system python3 to use 3.10
+      - name: Install Buildozer and Cython
         run: |
-          sudo ln -sf $(which python3) /usr/bin/python3
-          python3 --version
+          python -m pip install --upgrade pip
+          python -m pip install buildozer==1.5.0 cython==0.29.36
 
-      - name: Install buildozer (pinned working versions)
-        run: |
-          pip install --upgrade pip
-          pip install buildozer==1.5.0 cython==0.29.36 python-for-android==2024.1.21
-
-      - name: Cache buildozer global directory
+      - name: Cache Buildozer directory
         uses: actions/cache@v4
         with:
           path: |
@@ -46,19 +43,10 @@ jobs:
             .buildozer
           key: buildozer-${{ hashFiles('buildozer.spec') }}
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install Android SDK build-tools
-        run: |
-          yes | sdkmanager --licenses || true
-          sdkmanager "platform-tools" "platforms;android-33" "build-tools;33.0.2"
-          echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
-          echo "ANDROIDSDK=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
-          echo "PATH=$(python3 -c 'import sys; print(sys.exec_prefix)')/bin:$PATH:$ANDROID_SDK_ROOT/build-tools/33.0.2" >> $GITHUB_ENV
-
       - name: Build APK
-        run: buildozer -v android debug
+        run: |
+          export PATH="$PATH:$HOME/.local/bin"
+          buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
