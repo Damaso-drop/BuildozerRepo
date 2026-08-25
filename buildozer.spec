@@ -19,6 +19,7 @@ android.minapi = 21
 android.ndk = 25b
 android.build_tools = 33.0.2
 android.accept_sdk_license = True
+p4a.branch = v2024.01.21
 
 [buildozer]
 log_level = 2
