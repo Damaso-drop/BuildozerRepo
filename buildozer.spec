@@ -13,6 +13,7 @@ orientation = portrait
 fullscreen = 0
 
 icon.filename = %(source.dir)s/appicon.png
+presplash.filename = %(source.dir)s/appicon.png
 
 android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 
