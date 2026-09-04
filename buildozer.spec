@@ -1,5 +1,5 @@
 [app]
-title = BarPOS
+title = dâmasoGest
 package.name = barpos
 package.domain = org.damaso
 
