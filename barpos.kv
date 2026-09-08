@@ -1159,7 +1159,6 @@
                             bold: True
                             halign: 'left'
                             text_size: self.size
-                    # --- TENDENCY CHART ---
                     BoxLayout:
                         orientation: 'vertical'
                         padding: dp(10)
@@ -1433,8 +1432,6 @@
             bg_color: C_DANGER
             shadow_color: [0, 0, 0, 0.5]
             shadow_offset: [dp(1), dp(1)]
-            disabled: root.username == 'admin'
-            opacity: 0 if root.username == 'admin' else 1
             on_release: if root.delete_cb: root.delete_cb()
             Label:
                 text: 'X'
