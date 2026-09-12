@@ -4,7 +4,7 @@ package.name = barpos
 package.domain = org.damaso
 
 source.dir = .
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,json
 
 version = 1.0
 requirements = python3,kivy
